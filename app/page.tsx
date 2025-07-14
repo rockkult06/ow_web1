@@ -1044,7 +1044,7 @@ const content = {
     },
     bottomTags: {
       explore: "Entdecken:",
-      tags: ["Smart City Planning", "Transport Optimization", "AI Applications", "Urban Analytics"],
+      tags: ["Smart City Planung", "Verkehrsoptimierung", "KI-Anwendungen", "Urbane Analytik"],
     },
     ctaModal: {
       title: "OW – Optimize the World",
@@ -1323,18 +1323,28 @@ export default function HomePage() {
           </div>
 
           {/* Sağ: Dil Seçeneği */}
-          <div className="flex items-center">
+          <div className="flex items-center relative">
             <button
-              onClick={() => {
-                if (selectedLanguage === "TR") setSelectedLanguage("EN")
-                else if (selectedLanguage === "EN") setSelectedLanguage("DE")
-                else setSelectedLanguage("TR")
-              }}
+              onClick={() => setShowLangDropdown(!showLangDropdown)}
               className="bg-[#EBECEC]/55 rounded-lg px-3 py-2 sm:px-4 sm:py-3 shadow-md flex items-center gap-1 sm:gap-2 hover:bg-[#EBECEC]/70 transition-all duration-300 hover:scale-105"
             >
               <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
               <span className="text-xs sm:text-sm font-medium text-gray-900">{selectedLanguage}</span>
+              <ChevronDown className="w-3 h-3 text-gray-600" />
             </button>
+            {showLangDropdown && (
+              <div className="absolute right-0 mt-2 w-28 bg-white/80 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 z-50">
+                {["TR", "EN", "DE"].filter(l => l !== selectedLanguage).map(l => (
+                  <button
+                    key={l}
+                    onClick={() => { setSelectedLanguage(l); setShowLangDropdown(false); }}
+                    className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-[#EBECEC]/70 rounded-lg transition-colors duration-200"
+                  >
+                    {l === "TR" ? "Türkçe" : l === "EN" ? "English" : "Deutsch"}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </header>
