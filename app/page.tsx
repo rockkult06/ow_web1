@@ -2106,7 +2106,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0">
         {/* Ortalanmış Görsel - Tek görsel ve opaklık animasyonu */}
-        <div className="relative w-full max-w-[260px] h-[280px] sm:max-w-[500px] sm:h-[600px] -mt-20 sm:mt-0">
+        <div className="relative w-full max-w-[338px] h-[364px] sm:max-w-[650px] sm:h-[780px] -mt-20 sm:mt-0">
           <img
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
