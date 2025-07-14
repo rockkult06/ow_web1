@@ -774,6 +774,321 @@ const content = {
       },
     },
   },
+  DE: {
+    menu: {
+      hakkimizda: "Über uns",
+      cozumlerimiz: "Unsere Lösungen",
+      sektorler: "Sektoren",
+      basariHikayeleri: "Erfolgsgeschichten",
+      iletisim: "Kontakt",
+      ekibimiz: "Unser Team",
+    },
+    dropdownTitles: {
+      hakkimizda: "Über uns",
+      cozumlerimiz: "Unsere Lösungen",
+      sektorler: "Sektoren",
+      basariHikayeleri: "Erfolgsgeschichten",
+      iletisim: "Kontakt",
+      ekibimiz: "Unser Team",
+    },
+    dropdownSubtitles: {
+      cozumlerimiz: "Innovative Verkehrstechnologien für Smart Cities",
+      sektorler: "OW bietet optimierte Smart-City-Lösungen für verschiedene Sektoren.",
+      basariHikayeleri: "Echte Daten, echte Ergebnisse.",
+      iletisim: "Wie können wir für Sie optimieren?",
+      ekibimiz: "Wissenschaft, Technologie und urbanes Leben vereint.",
+    },
+    hakkimizda: {
+      bizKimiz: {
+        title: "Wer sind wir?",
+        desc1:
+          "OW (Optimize the World) hat sich zum Ziel gesetzt, wissenschaftliche und technologische Lösungen für die urbanen Mobilitätsherausforderungen zu bieten, denen Städte weltweit gegenüberstehen.",
+        desc2:
+          "Unser Ziel ist es, öffentliche Verkehrsnetze durch datengestützte Ansätze, fortschrittliche Optimierungsalgorithmen und KI-gestützte Systeme zu transformieren und Städte intelligenter, effizienter, zugänglicher und umweltverträglicher für die Zukunft zu machen.",
+      },
+      vizyonMisyon: {
+        title: "Vision - Mission",
+        visionTitle: "Unsere Vision",
+        visionDesc1: "Die Städte der Zukunft gestalten.",
+        visionDesc2: "Wir zielen darauf ab, zur digitalen Transformation von Städten mit den Themen Smart Cities, Smart People, Smart Economy, Smart Environment, Smart Mobility, Smart Transport, Smart Governance und Smart Life beizutragen.",
+        missionTitle: "Unsere Mission",
+        missionDesc1: "Datengestützte Smart-City-Lösungen entwickeln.",
+        missionDesc2:
+          "Wir entwickeln Technologien, die öffentliche Verkehrssysteme optimieren, menschenzentriert, ethisch und nachhaltig. Wir arbeiten nach dem Motto 'Technologie in der Entwicklung, Zukunft in der Innovation'.",
+      },
+    },
+    products: {
+      smartMobility: {
+        title: "Smart Mobility Lösungen",
+        subtitle: "Wir transformieren öffentliche Verkehrsnetze durch datengestützte Ansätze, fortschrittliche Optimierungsalgorithmen und KI-gestützte Systeme.",
+        items: [
+          {
+            id: "ow-transitopt",
+            title: "OW TransitOpt™",
+            icon: Car,
+            iconColor: "text-blue-600",
+            shortDescription: "Frequenzoptimierung: Präzise Planung basierend auf echter Nachfrage",
+            longDescription: `Wir optimieren Serviceintervalle mit wissenschaftlicher Vorhersage und proprietären Algorithmen und erreichen maximale Effizienz mit minimalen Fahrzeugen. Unsere Modelle analysieren Passagierflussmuster, Wetterbedingungen und besondere Ereignisse in Echtzeit, um optimale Serviceintervalle zu bieten. Dies ermöglicht es öffentlichen Verkehrsdiensten, dynamisch basierend auf sofortigen Anforderungen angepasst zu werden, unnötige Leerfahrten zu minimieren und Wartezeiten der Passagiere erheblich zu reduzieren.`,
+          },
+          {
+            id: "ow-fleetopt",
+            title: "OW FleetOpt™",
+            icon: Bus,
+            iconColor: "text-green-600",
+            shortDescription: "Flottenoptimierung: Intelligentere Ressourcenzuteilung, niedrigere Kosten",
+            longDescription: `Durch die Kombination mathematischer und intuitiver Ansätze passen wir die Kapazität Ihrer Flotte an zeitliche Nachfragemuster an und minimieren tote Kilometer. Fortschrittliche Algorithmen gewährleisten eine optimale Fahrzeug- und Fahrerverteilung in Ihrem Netzwerk. Dies trägt direkt zur effizientesten Nutzung von Fahrzeugen, reduziertem Kraftstoffverbrauch und niedrigeren Betriebskosten bei.`,
+          },
+          {
+            id: "ow-ridersense",
+            title: "OW RiderSense™",
+            icon: TrendingUp,
+            iconColor: "text-purple-600",
+            shortDescription: "Passagierdichte im Voraus vorhersagen.",
+            longDescription: `Echtzeit-Passagierbewegungen verbinden sich mit historischen Daten und Verhaltensanalysen. Dieses System prognostiziert stündliche, regionale und saisonale Passagierdichten und ermöglicht Verkehrsplanern dynamische Fahrplanplanung. Proaktive Serviceerhöhungen an überfüllten Haltestellen und Ressourcenoptimierung bei niedriger Dichte werden möglich.`,
+          },
+          {
+            id: "ow-costlogic",
+            title: "OW CostLogic™",
+            icon: DollarSign,
+            iconColor: "text-yellow-600",
+            shortDescription: "Verkehrsinvestitionen an den richtigen Ort lenken.",
+            longDescription: `Durch routenbasierte Kostenanalyse bietet es Entscheidungsträgern detaillierte und Echtzeit-Budgettransparenz. Es analysiert Posten wie Kraftstoffverbrauch, Wartungskosten, Personaleinsatz und Kosten pro Passagier und gewährleistet strategische Investitionsplanung und Ressourceneffizienz.`,
+          },
+        ],
+      },
+      smartTransport: {
+        title: "Smart Transport Technologien",
+        subtitle: "Pionierlösungen in den Bereichen 'Smart Mobility' und 'Smart Transport' im Zentrum des Smart Cities Themas.",
+        items: [
+          {
+            id: "ow-drt",
+            title: "OW DRT™",
+            icon: Route,
+            iconColor: "text-orange-600",
+            shortDescription: "Bedarfsgesteuerter Verkehr: Adaptiver Transport für ländliche und dünn besiedelte Gebiete",
+            longDescription: `Wir sind Pioniere flexibler, bedarfsgesteuerter öffentlicher Verkehrslösungen für unterversorgte Gebiete durch die Kombination von Benutzeranwendungen, Routenvorhersage und Echtzeit-Zuteilung. In ländlichen und dünn besiedelten Gebieten, wo traditionelle feste Routen ineffizient sind, ermöglicht es die sofortige Erstellung von Routen und Diensten basierend auf den Bedürfnissen der Bürger. Mit dynamischer Routenbestimmung und mobilbasierten Reservierungssystemen bietet es über 40% Steigerung der Servicenutzung und über 200% Erweiterung der Abdeckung in ländlichen Regionen.`,
+          },
+          {
+            id: "ow-accessibility",
+            title: "OW Accessibility™",
+            icon: MapPin,
+            iconColor: "text-red-600",
+            shortDescription: "Zugänglichkeitsanalyse: Digitale Messung für urbanen Transitzugang",
+            longDescription: `Mit Big Data Analysis und mehrkriteriellen Entscheidungsmethoden wie AHP/TOPSIS bestimmen wir digital die Zugangsebenen des städtischen öffentlichen Verkehrs. Dies hilft Städten, unterversorgte Gebiete zu identifizieren und Infrastrukturverbesserungen zu priorisieren. Wir analysieren detailliert den Zugang von Menschen mit Behinderungen, älteren Menschen und anderen Menschen mit besonderen Bedürfnissen zu öffentlichen Verkehrsdiensten.`,
+          },
+          {
+            id: "ow-odmatrix",
+            title: "OW ODMatrix™",
+            icon: BarChart3,
+            iconColor: "text-indigo-600",
+            shortDescription: "Ursprung-Ziel-Matrizen: Big Data-gestützte Reise-Modellanalyse",
+            longDescription: `Unsere fortschrittlichen OD-Matrizen kartieren Reiseverhalten in Ihrem Transitnetzwerk mit Big Data Analytics und Einsteigevorhersage-Algorithmen. Dies bietet beispiellose Einblicke in Passagierströme und ermöglicht gezielte Serviceverbesserungen und Ressourcenzuteilung. Durch die Analyse von über 10 Millionen Datenpunkten erreicht es 94% Routengenauigkeit und über 60% Planungseffizienz.`,
+          },
+          {
+            id: "ow-intelligence",
+            title: "OW Intelligence™",
+            icon: Brain,
+            iconColor: "text-green-600",
+            shortDescription: "Business Intelligence Lösungen: Transformieren Sie Transitdaten in handlungsfähige Informationen",
+            longDescription: `Von Data Warehousing bis hin zu dynamischen Power BI Dashboards zentralisieren, analysieren und visualisieren wir öffentliche Verkehrsdaten, um Muster zu enthüllen, Key Performance Indicators (KPIs) zu überwachen und langfristige Verkehrsstrategien zu informieren. Echtzeit-Analytik unterstützt evidenzbasierte Entscheidungsfindung. Dies ermöglicht es Stadtmanagern, die Leistung des Verkehrsnetzes in Echtzeit zu überwachen, problematische Bereiche zu identifizieren und strategische Entscheidungen für die Zukunft zu treffen.`,
+          },
+        ],
+      },
+    },
+    sectors: {
+      subtitle: "Unsere Smart-City-Lösungen können an die einzigartigen Dynamiken jeder Organisation angepasst werden.",
+      items: [
+        {
+          id: "municipalities-transport",
+          title: "Gemeinden & Verkehrsabteilungen",
+          icon: Building,
+          iconColor: "text-green-600",
+          shortDescription: "Wissenschaftliche Planungskraft für städtische Verkehrsnetze.",
+          longDescription: `Mit datengestützten Lösungen wie Routenoptimierung, Passagierdichtevorhersage und CO2-Fußabdruckanalyse werden öffentliche Verkehrssysteme intelligenter und Kosten werden niedriger. Wir bieten nachgewiesene Ergebnisse mit 30% Zeiteinsparung, 25% Kostenreduzierung und 99,9% Verfügbarkeit.`,
+        },
+        {
+          id: "smart-city-projects",
+          title: "Smart City Projekte",
+          icon: City,
+          iconColor: "text-purple-600",
+          shortDescription: "Urbane Intelligenz fokussiert auf Smart Mobility und Smart Transport.",
+          longDescription: `OW ermöglicht nachhaltiges, menschenzentriertes urbanes Leben durch die Analyse verschiedener Infrastruktursysteme von Städten unter einem Dach. Wir bieten Lösungen mit den Themen Smart Cities, Smart People, Smart Economy, Smart Environment, Smart Mobility, Smart Transport, Smart Governance und Smart Life.`,
+        },
+        {
+          id: "universities-research",
+          title: "Universitäten & Forschungseinrichtungen",
+          icon: GraduationCap,
+          iconColor: "text-orange-600",
+          shortDescription: "Leistungsstarke Dateninfrastruktur und KI-Unterstützung für wissenschaftliche Analysen.",
+          longDescription: `Eine ideale Plattform für die Bereinigung, Analyse und Visualisierung großer Datensätze in Forschungsprojekten. Sie unterstützt besonders datengestützte akademische Studien in den Bereichen Smart City Planung und Verkehr. Wir arbeiten mit İKÇÜ und Yaşar Universität zusammen, um die F&E- und Innovationskapazität der Region zu stärken.`,
+        },
+        {
+          id: "ministries-public",
+          title: "Verkehrsministerien & Öffentliche Einrichtungen",
+          icon: Government,
+          iconColor: "text-red-600",
+          shortDescription: "Gestalten Sie nationale Smart-Transport-Politiken mit Daten.",
+          longDescription: `In den Bereichen Entscheidungsunterstützungssysteme, Verkehrsmodellierung und Systemintegration bietet OW öffentlichen Einrichtungen umfassende Analyse- und Überwachungstools. Es bildet die Grundlage datengestützter Politikproduktion. Wir unterstützen F&E- und Innovationsaktivitäten im Rahmen des Gesetzes Nr. 5746.`,
+        },
+        {
+          id: "technology-startups",
+          title: "Technologie-Startups & Start-ups",
+          icon: Sparkles,
+          iconColor: "text-blue-600",
+          shortDescription: "Unterstützung für innovative Projekte, Patentakquisition und Unternehmensgründung.",
+          longDescription: `Als OW sind wir ein Startup-Unternehmen mit hohem Potenzial, unsere innovativen Geschäftsideen zu kommerzialisieren und uns mit Investoren mit Patent- und Lizenzwerten zu treffen. Wir beschleunigen unser Wachstum mit der Unterstützung des Ökosystems, in dem wir tätig sind.`,
+        },
+      ],
+    },
+    successStories: {
+      subtitle: "Mit OW-Lösungen optimierte Systeme bieten messbare Vorteile im Feld.",
+      items: [
+        {
+          id: "izmir-transport",
+          title: "İzmir Verkehrsnetzoptimierung",
+          icon: Route,
+          iconColor: "text-blue-600",
+          shortDescription: "Buslinien wurden mit wissenschaftlicher Analyse mit der İzmir Metropolitan Municipality neu strukturiert.",
+          longDescription: `In diesem mit der İzmir Metropolitan Municipality durchgeführten Projekt wurden alle Buslinien mit wissenschaftlicher Analyse unter Verwendung von OW TransitOpt™ Algorithmen neu strukturiert. Ergebnis: 18% kürzere durchschnittliche Reisezeit, 22% niedrigere Betriebskosten, signifikante Steigerung der Flotteneffizienz.`,
+        },
+        {
+          id: "passenger-density-cost-saving",
+          title: "Kosteneinsparungen mit Passagierdichte-Modellierung",
+          icon: Users,
+          iconColor: "text-purple-600",
+          shortDescription: "Einsparungen wurden im kommunalen öffentlichen Verkehrssystem mit Echtzeit-Passagiervorhersagemodell erzielt.",
+          longDescription: `Ein Echtzeit-Passagiervorhersagemodell wurde in einem kommunalen öffentlichen Verkehrssystem mit der OW RiderSense™ Plattform etabliert. Ergebnis: Fahrplanplanung wurde nach Nachfrage optimiert, 40% Reduzierung dichte-bezogener Beschwerden, 19% Einsparungen bei den Gesamtbetriebskosten.`,
+        },
+        {
+          id: "dead-km-minimization",
+          title: "Datengestütztes Dead-Km-Minimierungsmodell",
+          icon: Truck,
+          iconColor: "text-orange-600",
+          shortDescription: "Lösungen wurden implementiert, um tote Kilometer in der Flottenplanung zu reduzieren.",
+          longDescription: `OW CostLogic™ und TransitOpt™ wurden zusammen angewendet, um tote Kilometer in der Flottenplanung zu reduzieren. Ergebnis: Durch Optimierung der Garage-Route-Matches wurde der tägliche Gesamt-Dead-Km um 26% reduziert. Sowohl Kraftstoffkosten als auch CO2-Emissionen wurden erheblich reduziert.`,
+        },
+        {
+          id: "smart-city-integration",
+          title: "Smart City Integration Projekt",
+          icon: City,
+          iconColor: "text-green-600",
+          shortDescription: "Vollständige Integration von Verkehrs- und Umweltdaten für eine nachhaltige Stadtplanung.",
+          longDescription: `Ein umfassendes Smart City Projekt, das Verkehrs-, Umwelt- und Sozialdaten integriert, um nachhaltige Stadtplanungsentscheidungen zu unterstützen. Ergebnis: 35% Verbesserung der Verkehrseffizienz, 28% Reduzierung der Umweltbelastung und signifikante Verbesserung der Lebensqualität der Bürger.`,
+        },
+      ],
+    },
+    contact: {
+      subtitle: "Lassen Sie uns gemeinsam Ihre Mobilitätsherausforderungen lösen.",
+      items: [
+        {
+          id: "demo-form",
+          title: "Demo-Anfrage",
+          icon: FormInput,
+          iconColor: "text-blue-600",
+          shortDescription: "Vereinbaren Sie eine persönliche Demonstration unserer Lösungen.",
+          longDescription: `Füllen Sie das Formular aus und unser Expertenteam wird sich innerhalb von 24 Stunden mit Ihnen in Verbindung setzen, um eine maßgeschneiderte Demonstration zu vereinbaren.`,
+        },
+        {
+          id: "technical-support",
+          title: "Technischer Support",
+          icon: Phone,
+          iconColor: "text-green-600",
+          shortDescription: "Erhalten Sie technische Unterstützung für bestehende Implementierungen.",
+          longDescription: `Unser Support-Team steht Ihnen für alle technischen Fragen und Implementierungsherausforderungen zur Verfügung.`,
+        },
+        {
+          id: "partnership",
+          title: "Partnerschaftsmöglichkeiten",
+          icon: Handshake,
+          iconColor: "text-purple-600",
+          shortDescription: "Entdecken Sie Kooperationsmöglichkeiten mit OW.",
+          longDescription: `Lassen Sie uns gemeinsam innovative Lösungen entwickeln und die Zukunft der urbanen Mobilität gestalten.`,
+        },
+      ],
+    },
+    ekibimiz: {
+      subtitle: "Wissenschaft, Technologie und urbanes Leben vereint.",
+      items: [
+        {
+          id: "data-scientist",
+          title: "Senior Data Scientist",
+          icon: Brain,
+          iconColor: "text-blue-600",
+          shortDescription: "Derjenige, der Daten von Chaos zu Ordnung transformiert.",
+          longDescription:
+            "Der Architekt, der Multi-Source-Big-Data-Ströme filtert, verarbeitet und verständlich macht. Baut das Datenrückgrat der OW-Plattform auf und etabliert sichere und skalierbare Datensysteme.",
+        },
+        {
+          id: "urban-planner",
+          title: "Senior Urban Planner",
+          icon: City,
+          iconColor: "text-orange-600",
+          shortDescription: "Gestaltet die Stadt nicht nur mit Straßen, sondern mit Menschen.",
+          longDescription:
+            "Arbeitet daran, Städte gesünder und inklusiver zu machen durch mehrdimensionale Analysen wie öffentlicher Verkehr, Gesundheitszugang und Umweltauswirkungen. Trägt die Vision menschenzentrierter Smart Cities.",
+        },
+        {
+          id: "sistem-muhendisi",
+          title: "System Engineer",
+          icon: Puzzle,
+          iconColor: "text-red-600",
+          shortDescription: "Optimiert jede Komponente innerhalb eines Ganzen.",
+          longDescription:
+            "Der systemische Verstand hinter OWs Software, Algorithmen und Integrationsprozessen. Der Schöpfer der architektonischen Einrichtung, die es verschiedenen Modulen ermöglicht, zusammenzuarbeiten.",
+        },
+      ],
+    },
+    hero: {
+      cta: "Datengestützte Lösungen für Smart Cities",
+      slogan: "Smart Mobility Lösungen [♡] Smart Transport Technologien",
+    },
+    bottomTags: {
+      explore: "Entdecken:",
+      tags: ["Smart City Planning", "Transport Optimization", "AI Applications", "Urban Analytics"],
+    },
+    ctaModal: {
+      title: "OW – Optimize the World",
+      description: "Wir bauen eine intelligentere, effizientere Welt mit datengestützten Entscheidungsunterstützungssystemen.",
+      overview:
+        "OW ist eine multidisziplinäre Technologieorganisation, die Lösungen basierend auf Datenwissenschaft, Optimierungsalgorithmen und künstlicher Intelligenz für Smart Cities und urbane Infrastrukturen entwickelt. Unser Hauptziel ist es, die Entscheidungsprozesse von öffentlichen und privaten Sektoreinrichtungen mit wissenschaftlichen Methoden zu stärken, Ressourcennutzung zu optimieren und Servicequalität messbar zu erhöhen.",
+      expertiseAreas: {
+        title: "Unsere Fachgebiete",
+        healthSystems: {
+          title: "🚌 Smart Mobility Lösungen",
+          description:
+            "OW bietet datengestützte Technologien für Verkehrsbetriebe, Gemeinden und Verkehrsministerien in folgenden Bereichen:",
+          points: [
+            "Verkehrsnetzoptimierung",
+            "Echtzeit-Passagierdichtevorhersage",
+            "Tote-Kilometer-Reduzierung",
+            "CO2-Emissionen und Umweltauswirkungsanalysen",
+            "Urbane Verkehrszugangsmodellierung",
+          ],
+          products:
+            "Unsere OW TransitOpt™, OW RiderSense™ und OW CostLogic™ Produktfamilie, entwickelt in diesem Kontext, bietet Effizienz, Geschwindigkeit und Kosteneffektivität in Verkehrsplanungsprozessen.",
+        },
+        healthyCities: {
+          title: "Smart Transport Technologien für Smart Cities",
+          description:
+            "OW bietet hochgenaue analytische Modelle und Optimierungstools für Entscheidungsträger in der Stadtplanung und im öffentlichen Verkehrsmanagement:",
+          points: [
+            "Bedarfsgesteuerter Verkehr",
+            "Zugänglichkeitsanalyse",
+            "Ursprung-Ziel-Matrixanalyse",
+            "Business Intelligence Lösungen",
+            "Urbane Mobilitätsmodellierung",
+          ],
+          products:
+            "Die OW DRT™, OW Accessibility™ und OW Intelligence™ Lösungen, entwickelt für diesen Zweck, unterstützen sowohl die betriebliche Effizienz als auch die Nachhaltigkeitsziele von Städten.",
+        },
+      },
+      scientificApproach: {
+        title: "Wissenschaftlicher Ansatz und multidisziplinäres Team",
+        description:
+          "Das Team innerhalb OW besteht aus Experten aus verschiedenen Bereichen wie Statistik, Wirtschaft, Systemtechnik, Stadtplanung, Informatik und Verkehrswissenschaften. Somit ist jede unserer Lösungen auf akademisch validierten, feldgetesteten Strukturen mit hohem Wirkungspotenzial aufgebaut.",
+      },
+    },
+  },
 }
 
 export default function HomePage() {
@@ -1010,7 +1325,11 @@ export default function HomePage() {
           {/* Sağ: Dil Seçeneği */}
           <div className="flex items-center">
             <button
-              onClick={() => setSelectedLanguage(selectedLanguage === "TR" ? "EN" : "TR")}
+              onClick={() => {
+                if (selectedLanguage === "TR") setSelectedLanguage("EN")
+                else if (selectedLanguage === "EN") setSelectedLanguage("DE")
+                else setSelectedLanguage("TR")
+              }}
               className="bg-[#EBECEC]/55 rounded-lg px-3 py-2 sm:px-4 sm:py-3 shadow-md flex items-center gap-1 sm:gap-2 hover:bg-[#EBECEC]/70 transition-all duration-300 hover:scale-105"
             >
               <Globe className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600" />
@@ -1372,7 +1691,9 @@ export default function HomePage() {
 
               {activeDropdown === "mobile-menu" && (
                 <div className="space-y-3">
-                  <h3 className="text-base font-medium text-gray-900 mb-4">Menü</h3>
+                  <h3 className="text-base font-medium text-gray-900 mb-4">
+                    {selectedLanguage === "TR" ? "Menü" : selectedLanguage === "EN" ? "Menu" : "Menü"}
+                  </h3>
                   <div className="space-y-2">
                     <button
                       onClick={() => {
