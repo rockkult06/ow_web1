@@ -2111,6 +2111,7 @@ export default function HomePage() {
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
             className="absolute inset-0 w-full h-full object-contain hero-image-animated"
+            style={{opacity:0.7}}
           />
         </div>
 
@@ -2129,6 +2130,17 @@ export default function HomePage() {
         </div>
       </main>
 
+      {/* Video Background */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-30"
+        style={{opacity:0.3}}
+      >
+        <source src="/2.mp4" type="video/mp4" />
+      </video>
 
     </div>
   )
