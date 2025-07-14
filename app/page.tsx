@@ -1039,53 +1039,53 @@ const content = {
       ],
     },
     hero: {
-      cta: "Data-driven solutions for smart cities",
-      slogan: "Smart Mobility Solutions [♡] Smart Transport Technologies",
+      cta: "Datengestützte Lösungen für Smart Cities",
+      slogan: "Smart Mobility Lösungen [♡] Smart Transport Technologien",
     },
     bottomTags: {
-      explore: "Explore:",
+      explore: "Entdecken:",
       tags: ["Smart City Planning", "Transport Optimization", "AI Applications", "Urban Analytics"],
     },
     ctaModal: {
       title: "OW – Optimize the World",
-      description: "We are building a smarter, more efficient world with data-driven decision support systems.",
+      description: "Wir bauen eine intelligentere, effizientere Welt mit datengestützten Entscheidungsunterstützungssystemen.",
       overview:
-        "OW is a multidisciplinary technology organization that develops solutions based on data science, optimization algorithms, and artificial intelligence for smart cities and urban infrastructures. Our main goal is to strengthen the decision-making processes of public and private sector institutions with scientific methods, optimize resource utilization, and measurably increase service quality.",
+        "OW ist eine multidisziplinäre Technologieorganisation, die Lösungen basierend auf Datenwissenschaft, Optimierungsalgorithmen und künstlicher Intelligenz für Smart Cities und urbane Infrastrukturen entwickelt. Unser Hauptziel ist es, die Entscheidungsprozesse von öffentlichen und privaten Sektoreinrichtungen mit wissenschaftlichen Methoden zu stärken, Ressourcennutzung zu optimieren und Servicequalität messbar zu erhöhen.",
       expertiseAreas: {
-        title: "Our Areas of Expertise",
+        title: "Unsere Fachgebiete",
         healthSystems: {
-          title: "🚌 Smart Mobility Solutions",
+          title: "🚌 Smart Mobility Lösungen",
           description:
-            "OW offers data-supported technologies to transport operators, municipalities, and transport ministries in the following areas:",
+            "OW bietet datengestützte Technologien für Verkehrsbetriebe, Gemeinden und Verkehrsministerien in folgenden Bereichen:",
           points: [
-            "Transportation network optimization",
-            "Real-time passenger density prediction",
-            "Dead mileage reduction",
-            "Carbon emission and environmental impact analyses",
-            "Urban transport access modeling",
+            "Verkehrsnetzoptimierung",
+            "Echtzeit-Passagierdichtevorhersage",
+            "Tote-Kilometer-Reduzierung",
+            "CO2-Emissionen und Umweltauswirkungsanalysen",
+            "Urbane Verkehrszugangsmodellierung",
           ],
           products:
-            "Our OW TransitOpt™, OW RiderSense™, and OW CostLogic™ product family, developed in this context, provides efficiency, speed, and cost-effectiveness in transport planning processes.",
+            "Unsere OW TransitOpt™, OW RiderSense™ und OW CostLogic™ Produktfamilie, entwickelt in diesem Kontext, bietet Effizienz, Geschwindigkeit und Kosteneffektivität in Verkehrsplanungsprozessen.",
         },
         healthyCities: {
-          title: "Smart Transport Technologies for Smart Cities",
+          title: "Smart Transport Technologien für Smart Cities",
           description:
-            "OW offers high-accuracy analytical models and optimization tools for decision-makers in urban planning and public transportation management:",
+            "OW bietet hochgenaue analytische Modelle und Optimierungstools für Entscheidungsträger in der Stadtplanung und im öffentlichen Verkehrsmanagement:",
           points: [
-            "Demand-responsive transit",
-            "Accessibility analysis",
-            "Origin-destination matrix analysis",
-            "Business intelligence solutions",
-            "Urban mobility modeling",
+            "Bedarfsgesteuerter Verkehr",
+            "Zugänglichkeitsanalyse",
+            "Ursprung-Ziel-Matrixanalyse",
+            "Business Intelligence Lösungen",
+            "Urbane Mobilitätsmodellierung",
           ],
           products:
-            "The OW DRT™, OW Accessibility™, and OW Intelligence™ solutions developed for this purpose support both the operational efficiency and sustainability goals of cities.",
+            "Die OW DRT™, OW Accessibility™ und OW Intelligence™ Lösungen, entwickelt für diesen Zweck, unterstützen sowohl die betriebliche Effizienz als auch die Nachhaltigkeitsziele von Städten.",
         },
       },
       scientificApproach: {
-        title: "Scientific Approach and Multidisciplinary Team",
+        title: "Wissenschaftlicher Ansatz und multidisziplinäres Team",
         description:
-          "The team within OW consists of experts from different fields such as statistics, economics, systems engineering, urban planning, computer science, and transport sciences. Thus, each of our solutions is built on academically validated, field-tested structures with high impact potential.",
+          "Das Team innerhalb OW besteht aus Experten aus verschiedenen Bereichen wie Statistik, Wirtschaft, Systemtechnik, Stadtplanung, Informatik und Verkehrswissenschaften. Somit ist jede unserer Lösungen auf akademisch validierten, feldgetesteten Strukturen mit hohem Wirkungspotenzial aufgebaut.",
       },
     },
   },
