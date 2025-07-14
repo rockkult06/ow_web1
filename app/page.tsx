@@ -52,7 +52,7 @@ const content = {
       sektorler: "Sektörler",
       basariHikayeleri: "Başarı Hikayeleri",
       iletisim: "İletişim",
-      ekibimiz: "Ekibimiz", // Renamed from search
+      ekibimiz: "Ekibimiz",
     },
     dropdownTitles: {
       hakkimizda: "Hakkımızda",
@@ -60,98 +60,60 @@ const content = {
       sektorler: "Sektörler",
       basariHikayeleri: "Başarı Hikayeleri",
       iletisim: "İletişim",
-      ekibimiz: "Ekibimiz", // Renamed from search
+      ekibimiz: "Ekibimiz",
     },
     dropdownSubtitles: {
-      cozumlerimiz: "Ürünleri Keşfedin",
-      sektorler: "OW, farklı sektörlere özel optimize edilmiş çözümler sunar.",
+      cozumlerimiz: "Akıllı Şehirler İçin Yenilikçi Ulaşım Teknolojileri",
+      sektorler: "OW, farklı sektörlere özel optimize edilmiş akıllı şehir çözümleri sunar.",
       basariHikayeleri: "Gerçek veri, gerçek sonuçlar.",
       iletisim: "Sizin için nasıl optimize edebiliriz?",
-      ekibimiz: "Bilim, teknoloji ve şehir yaşamı bir arada.", // New subtitle for Ekibimiz
+      ekibimiz: "Bilim, teknoloji ve şehir yaşamı bir arada.",
     },
     hakkimizda: {
       bizKimiz: {
         title: "Biz Kimiz?",
         desc1:
-          "OW, veriyi anlamlandırarak dünyayı daha sağlıklı ve daha yaşanabilir hale getiren teknoloji şirketidir.",
+          "OW (Optimize the World), küresel ölçekte şehirlerin karşılaştığı kentsel hareketlilik sorunlarına bilimsel ve teknolojik çözümler sunmak üzere yola çıktık.",
         desc2:
-          "Sağlık sistemlerinden kent içi ulaşıma kadar uzanan çözümlerimizle, kararların daha hızlı, sistemlerin daha akıllı, şehirlerin daha insancıl olmasını sağlıyoruz.",
+          "Veri odaklı yaklaşımlar, ileri optimizasyon algoritmaları ve yapay zeka destekli sistemlerle toplu taşıma ağlarını dönüştürerek, şehirleri daha akıllı, daha verimli, daha erişilebilir ve çevresel açıdan daha sürdürülebilir bir geleceğe taşımaktır.",
       },
       vizyonMisyon: {
         title: "Vizyon - Misyon",
         visionTitle: "Vizyonumuz",
-        visionDesc1: "Veriyle şekillenen bir dünya kurmak.",
-        visionDesc2: "Her bireyin, her şehrin ve her sistemin daha verimli çalıştığı bir gelecek tasarlıyoruz.",
+        visionDesc1: "Geleceğin şehirlerini şekillendirmek.",
+        visionDesc2: "Akıllı Şehirler, Akıllı İnsanlar, Akıllı Ekonomi, Akıllı Çevre, Akıllı Hareketlilik, Akıllı Ulaşım, Akıllı Yönetişim ve Akıllı Yaşam temalarıyla şehirlerin dijital dönüşümüne katkı sağlamayı hedefliyoruz.",
         missionTitle: "Misyonumuz",
-        missionDesc1: "Veriyi eyleme dönüştürmek.",
+        missionDesc1: "Veri odaklı akıllı şehir çözümleri geliştirmek.",
         missionDesc2:
-          "Sağlık ve şehir yaşamında kararları optimize eden, insan odaklı, etik ve sürdürülebilir teknolojiler geliştiriyoruz.",
+          "Toplu taşıma sistemlerini optimize eden, insan odaklı, etik ve sürdürülebilir teknolojiler geliştiriyoruz. 'Gelişimde Teknoloji, İnovasyonda Gelecek' mottosuyla hareket ediyoruz.",
       },
     },
     products: {
-      healthSystems: {
-        title: "Sağlık Sistemleri",
-        subtitle: "Veriyle güçlenen sağlık kararları.",
-        items: [
-          {
-            id: "ow-insight",
-            title: "OW Insight™",
-            icon: Stethoscope,
-            iconColor: "text-blue-600",
-            shortDescription: "Karmaşık tıbbi verileri anında anlamlandırın.",
-            longDescription: `Hasta geçmişi, laboratuvar sonuçları, görüntüleme verileri ve klinik notlar gibi çok kaynaklı verileri bir araya getirerek, kullanıcı dostu grafikler ve sezgisel panellerle analiz eder. Gerçek zamanlı analiz kabiliyeti, klinisyenlerin hızlı ve bilinçli karar almasını sağlar. Veriye dayalı şeffaflık, sadece tedavi süreçlerini değil, hasta güvenini de artırır.`,
-          },
-          {
-            id: "ow-decisions",
-            title: "OW Decisions™",
-            icon: Activity,
-            iconColor: "text-green-600",
-            shortDescription: "Tedavi kararlarını yapay zekâ ile destekleyin.",
-            longDescription: `Klinik karar destek sistemi, hastaya özgü sağlık verilerini analiz ederek en uygun teşhis ve tedavi önerilerini sunar. Güncel medikal protokollerle uyumlu olan bu sistem, ölçülebilir risk analizleri ve senaryo bazlı öneriler sunarak doktorlara bir adım önde karar alma yeteneği kazandırır.`,
-          },
-          {
-            id: "ow-signals",
-            title: "OW Signals™",
-            icon: AlertTriangle,
-            iconColor: "text-red-600",
-            shortDescription: "Kritik verilerle önceden harekete geçin.",
-            longDescription: `Yoğun bakım ve kronik hasta takiplerinde hayati önem taşıyan sürekli verileri işler. Kalp atış hızı, oksijen seviyesi, solunum gibi vital parametrelerdeki anormallikleri gerçek zamanlı olarak tespit eder ve klinik personeli önceden uyarır. Bu sayede komplikasyonların önlenmesi ve acil müdahale süresi kısaltılır.`,
-          },
-          {
-            id: "clinical-data-analysis",
-            title: "Klinik Veri Analizi ve Karar Destek",
-            icon: Hospital,
-            iconColor: "text-purple-600",
-            shortDescription: "Veriler artık sadece kayıt değil, bir yol gösterici.",
-            longDescription: `Sağlık kuruluşlarının günlük veri yığını içinde kaybolmasını önler. Veri analitiği sayesinde teşhis doğruluğu artar, tedavi süreçleri kişiselleşir, kaynak kullanımı ise daha verimli hale gelir. Makine öğrenimi destekli analizler, karar alma süreçlerinde doktorlara veri temelli netlik sağlar.`,
-          },
-          {
-            id: "hospital-integration",
-            title: "Hastane, Klinik ve Aile Hekimliği Entegrasyonu",
-            icon: Dna,
-            iconColor: "text-indigo-600",
-            shortDescription: "Tüm sağlık kademelerini tek bir zeka çatısı altında birleştirin.",
-            longDescription: `OW platformu, sağlık hizmet zincirinin tüm katmanlarını entegre eder: Hastane, poliklinik, aile hekimliği ve laboratuvar sistemleri birbiriyle veri uyumlu şekilde çalışır. Bu entegrasyon, hastanın yaşam döngüsü boyunca bütüncül bir sağlık takibi sağlar ve tekrar eden testleri, bilgi kayıplarını, zaman ve maliyet israfını ortadan kaldırır.`,
-          },
-        ],
-      },
-      healthyCities: {
-        title: "Sağlıklı Kent Çözümleri",
-        subtitle: "Veriyle planlanan, insan odaklı kentler.",
+      smartMobility: {
+        title: "Akıllı Hareketlilik Çözümleri",
+        subtitle: "Veri odaklı yaklaşımlar, ileri optimizasyon algoritmaları ve yapay zeka destekli sistemlerle toplu taşıma ağlarını dönüştürüyoruz.",
         items: [
           {
             id: "ow-transitopt",
             title: "OW TransitOpt™",
             icon: Car,
             iconColor: "text-blue-600",
-            shortDescription: "Ulaşım hatlarını bilimsel olarak yeniden düşünün.",
-            longDescription: `Toplu taşıma hatlarının veriye dayalı şekilde yeniden yapılandırılmasını sağlar. Araç-güzergâh eşlemesi, garaj-hat uzaklık optimizasyonu ve filo kapasite dengesi ile hem işletme maliyetlerini azaltır, hem de yolcu memnuniyetini artırır. Simülasyon destekli planlama ile doğru kaynak, doğru hatta, doğru zamanda.`,
+            shortDescription: "Frekans Optimizasyonu: Gerçek Talebe Dayalı Hassas Planlama",
+            longDescription: `Bilimsel tahminleme ve özel algoritmalarımızla sefer aralıklarını optimize ederek, en az sayıda araçla en yüksek verimliliği sağlarız. Modellerimiz, yolcu akış desenlerini, hava koşullarını ve özel etkinlikleri gerçek zamanlı olarak analiz ederek optimal hizmet aralıkları sunar. Bu sayede, toplu taşıma hizmetleri, anlık taleplere göre dinamik olarak ayarlanabilir, gereksiz boş seferler minimize edilir ve yolcu bekleme süreleri önemli ölçüde azalır.`,
+          },
+          {
+            id: "ow-fleetopt",
+            title: "OW FleetOpt™",
+            icon: Bus,
+            iconColor: "text-green-600",
+            shortDescription: "Filo Optimizasyonu: Daha Akıllı Kaynak Tahsisi, Daha Düşük Maliyetler",
+            longDescription: `Matematiksel ve sezgisel yaklaşımları birleştirerek, filonuzun kapasitesini zamansal talep desenleriyle uyumlu hale getirir ve boş kilometreleri (dead mileage) minimize ederiz. Gelişmiş algoritmalar, ağınız genelinde optimal araç ve sürücü dağıtımını sağlar. Bu, araçların en verimli şekilde kullanılmasına, yakıt tüketiminin azaltılmasına ve operasyonel maliyetlerin düşürülmesine doğrudan katkıda bulunur.`,
           },
           {
             id: "ow-ridersense",
             title: "OW RiderSense™",
             icon: TrendingUp,
-            iconColor: "text-green-600",
+            iconColor: "text-purple-600",
             shortDescription: "Yolcu yoğunluğunu önceden tahmin edin.",
             longDescription: `Gerçek zamanlı yolcu hareketleri, geçmiş veriler ve davranışsal analizlerle birleşir. Bu sistem, saatlik, bölgesel ve mevsimsel yolcu yoğunluklarını tahmin ederek ulaşım planlamacılarına dinamik sefer planlaması sağlar. Kalabalık duraklarda önleyici sefer artışı, düşük yoğunlukta kaynak optimizasyonu mümkün olur.`,
           },
@@ -163,67 +125,65 @@ const content = {
             shortDescription: "Ulaşım yatırımlarını doğru yere yönlendirin.",
             longDescription: `Güzergâh bazlı maliyet analizi yaparak, karar vericilere detaylı ve gerçek zamanlı bütçe görünürlüğü sunar. Yakıt tüketimi, bakım maliyetleri, personel dağılımı ve yolcu başı maliyet gibi kalemleri analiz ederek; stratejik yatırım planlaması ve kaynak verimliliği sağlar.`,
           },
+        ],
+      },
+      smartTransport: {
+        title: "Akıllı Ulaşım Teknolojileri",
+        subtitle: "Akıllı Şehirler temasının merkezinde yer alan 'Akıllı Hareketlilik' ve 'Akıllı Ulaşım' alanlarında öncü çözümler.",
+        items: [
           {
-            id: "transportation-network-optimization",
-            title: "Ulaşım Ağı Optimizasyonu",
-            icon: Bus,
+            id: "ow-drt",
+            title: "OW DRT™",
+            icon: Route,
             iconColor: "text-orange-600",
-            shortDescription: "Şehrinizdeki her hattı veriye göre yeniden şekillendirin.",
-            longDescription: `OW'nin optimizasyon motoru, tüm şehir ulaşım haritasını algoritmalarla yeniden değerlendirir. Boş seferleri tespit eder, düşük verimli hatları önerilerle iyileştirir ve toplu taşımanın hem etkinliğini hem de erişilebilirliğini artırır. Yolcular daha az bekler, sistem daha az harcar.`,
+            shortDescription: "Talep Bazlı Toplu Taşıma: Kırsal ve Düşük Yoğunluklu Alanlar İçin Uyarlanabilir Ulaşım",
+            longDescription: `Kullanıcı uygulamaları, rota tahmini ve gerçek zamanlı tahsisi birleştirerek, yetersiz hizmet alan bölgeler için esnek, talebe dayalı toplu taşıma çözümlerine öncülük ediyoruz. Geleneksel sabit rotaların verimsiz olduğu kırsal ve düşük yoğunluklu alanlarda, vatandaşların ihtiyaçlarına göre anlık olarak rota ve sefer oluşturulmasını sağlar. Dinamik rota belirleme ve mobil tabanlı rezervasyon sistemleriyle, kırsal bölgelerde %40'ın üzerinde hizmet kullanım artışı ve %200'ün üzerinde kapsama alanı genişlemesi sağlar.`,
           },
           {
-            id: "urban-health-access-analysis",
-            title: "Kentsel Sağlık Erişimi Analizi",
+            id: "ow-accessibility",
+            title: "OW Accessibility™",
             icon: MapPin,
             iconColor: "text-red-600",
-            shortDescription: "Herkesin sağlık hizmetine adil erişimini sağlayın.",
-            longDescription: `Toplu taşıma–sağlık erişim entegrasyonu.`,
+            shortDescription: "Erişilebilirlik Analizi: Kentsel Transit Erişimi İçin Dijital Ölçüm",
+            longDescription: `Büyük Veri Analizi ve AHP/TOPSIS gibi çok kriterli karar verme yöntemlerini kullanarak kentsel toplu taşıma erişim seviyelerini dijital olarak belirleriz. Bu, şehirlerin yetersiz hizmet alanlarını tespit etmelerine ve altyapı iyileştirmelerine öncelik vermelerine yardımcı olur. Engelli bireylerin, yaşlıların ve diğer özel ihtiyaç sahiplerinin toplu taşıma hizmetlerine erişimini detaylı bir şekilde analiz ederiz.`,
           },
           {
-            id: "passenger-behavior-analysis",
-            title: "Yolcu Davranışı Analizi",
+            id: "ow-odmatrix",
+            title: "OW ODMatrix™",
             icon: BarChart3,
-            iconColor: "text-purple-600",
-            shortDescription: "Şehir sakinlerini daha iyi anlayın, akışı ona göre yönetin.",
-            longDescription: `Veriye dayalı kullanıcı profilleri ve tahminler.`,
+            iconColor: "text-indigo-600",
+            shortDescription: "Kaynak-Hedef Matrisleri: Büyük Veri Destekli Seyahat Modeli Analizi",
+            longDescription: `Gelişmiş OD matrislerimiz, transit ağınızdaki seyahat modellerini haritalamak için büyük veri analitiği ve iniş tahmini algoritmalarını kullanır. Bu, yolcu akışları hakkında eşi benzeri görülmemiş bir içgörü sağlayarak hedeflenen hizmet iyileştirmelerine ve kaynak tahsisine olanak tanır. 10 milyondan fazla veri noktasını analiz ederek %94'lük rota doğruluğu ve %60'ın üzerinde planlama verimliliği sağlar.`,
           },
           {
-            id: "carbon-environmental-impact-modeling",
-            title: "Karbon ve Çevresel Etki Modellemesi",
-            icon: Leaf,
+            id: "ow-intelligence",
+            title: "OW Intelligence™",
+            icon: Brain,
             iconColor: "text-green-600",
-            shortDescription: "Kent politikalarını sürdürülebilirlik odağında optimize edin.",
-            longDescription: `Emisyon azaltımı, çevresel risk haritaları, planlama desteği.`,
+            shortDescription: "İş Zekası Çözümleri: Transit Verilerini Eyleme Dönüştürülebilir Bilgiye Dönüştürün",
+            longDescription: `Veri ambarlamadan dinamik Power BI gösterge tablolarına kadar, toplu taşıma verilerini merkezileştirir, analiz eder ve görselleştirerek kalıpları ortaya çıkarır, temel performans göstergelerini (KPI) izler ve uzun vadeli ulaşım stratejilerini bilgilendiririz. Gerçek zamanlı analitik, kanıta dayalı karar almayı destekler. Bu sayede şehir yöneticileri, ulaşım ağının performansını anlık olarak izleyebilir, sorunlu alanları tespit edebilir ve geleceğe yönelik stratejik kararlar alabilirler.`,
           },
         ],
       },
     },
     sectors: {
-      subtitle: "Veriye dayalı karar destek altyapımız, her kurumun kendi dinamiklerine uygun şekilde uyarlanabilir.",
+      subtitle: "Akıllı şehir çözümlerimiz, her kurumun kendi dinamiklerine uygun şekilde uyarlanabilir.",
       items: [
-        {
-          id: "hospitals-clinics",
-          title: "Hastaneler & Klinikler",
-          icon: BriefcaseMedical,
-          iconColor: "text-blue-600",
-          shortDescription: "Tanıdan tedaviye, veriyle güçlenen sağlık hizmetleri.",
-          longDescription: `OW ürünleriyle hasta verileri anında analiz edilir, riskler öngörülür, tedavi süreçleri hızlandırılır. Klinik kararlar artık daha doğru, sistemler daha verimli.`,
-        },
         {
           id: "municipalities-transport",
           title: "Belediyeler & Ulaşım Daireleri",
           icon: Building,
           iconColor: "text-green-600",
           shortDescription: "Şehir içi ulaşım ağları için bilimsel planlama gücü.",
-          longDescription: `Hat optimizasyonu, yolcu yoğunluğu tahmini, karbon ayak izi analizi gibi veriye dayalı çözümlerle toplu taşıma sistemleri daha akıllı, maliyetler daha düşük hale gelir.`,
+          longDescription: `Hat optimizasyonu, yolcu yoğunluğu tahmini, karbon ayak izi analizi gibi veriye dayalı çözümlerle toplu taşıma sistemleri daha akıllı, maliyetler daha düşük hale gelir. %30 zaman tasarrufu, %25 maliyet azaltma ve %99.9 çalışma süresi ile kanıtlanmış sonuçlar sunarız.`,
         },
         {
           id: "smart-city-projects",
           title: "Akıllı Şehir Projeleri",
           icon: City,
           iconColor: "text-purple-600",
-          shortDescription: "Sağlık, ulaşım ve çevre verisini entegre eden kent zekâsı.",
-          longDescription: `OW, şehirlerin farklı altyapı sistemlerini tek çatı altında analiz ederek sürdürülebilir, insan odaklı şehir yaşamını mümkün kılar.`,
+          shortDescription: "Akıllı Hareketlilik ve Akıllı Ulaşım odaklı kent zekâsı.",
+          longDescription: `OW, şehirlerin farklı altyapı sistemlerini tek çatı altında analiz ederek sürdürülebilir, insan odaklı şehir yaşamını mümkün kılar. Akıllı Şehirler, Akıllı İnsanlar, Akıllı Ekonomi, Akıllı Çevre, Akıllı Hareketlilik, Akıllı Ulaşım, Akıllı Yönetişim ve Akıllı Yaşam temalarıyla çözümler sunarız.`,
         },
         {
           id: "universities-research",
@@ -231,15 +191,23 @@ const content = {
           icon: GraduationCap,
           iconColor: "text-orange-600",
           shortDescription: "Bilimsel analizlerde güçlü veri altyapısı ve yapay zekâ desteği.",
-          longDescription: `Araştırma projelerinde büyük veri setlerinin temizlenmesi, analizi ve görselleştirilmesi için ideal platform. Özellikle sağlık ve şehir planlama alanlarında veri güdümlü akademik çalışmaları destekler.`,
+          longDescription: `Araştırma projelerinde büyük veri setlerinin temizlenmesi, analizi ve görselleştirilmesi için ideal platform. Özellikle akıllı şehir planlama ve ulaşım alanlarında veri güdümlü akademik çalışmaları destekler. İKÇÜ ve Yaşar Üniversitesi ile işbirliği yaparak, bölgenin Ar-Ge ve inovasyon kapasitesini güçlendiriyoruz.`,
         },
         {
           id: "ministries-public",
-          title: "Sağlık Bakanlıkları & Kamu Kurumları",
+          title: "Ulaşım Bakanlıkları & Kamu Kurumları",
           icon: Government,
           iconColor: "text-red-600",
-          shortDescription: "Ulusal düzeyde sağlık politikalarını veriyle şekillendirin.",
-          longDescription: `Karar destek sistemleri, epidemiyolojik modelleme ve sistem entegrasyonu alanlarında OW, kamu kurumlarına kapsamlı analiz ve izleme araçları sunar. Veriye dayalı politika üretiminin temelini oluşturur.`,
+          shortDescription: "Ulusal düzeyde akıllı ulaşım politikalarını veriyle şekillendirin.",
+          longDescription: `Karar destek sistemleri, ulaşım modelleme ve sistem entegrasyonu alanlarında OW, kamu kurumlarına kapsamlı analiz ve izleme araçları sunar. Veriye dayalı politika üretiminin temelini oluşturur. 5746 Sayılı Kanun kapsamında Ar-Ge ve inovasyon faaliyetlerini destekler.`,
+        },
+        {
+          id: "technology-startups",
+          title: "Teknoloji Girişimleri & Start-up'lar",
+          icon: Sparkles,
+          iconColor: "text-blue-600",
+          shortDescription: "Yenilikçi projelere yönelme, patent alma ve şirket kurma desteği.",
+          longDescription: `OW olarak, yenilikçi iş fikirlerimizi ticarileştirme ve patent ile lisans değerleriyle yatırımcılarla buluşturma potansiyeli yüksek bir start-up firmasıyız. Faaliyet gösterdiğimiz ekosistemin desteğiyle büyümemizi hızlandırıyoruz.`,
         },
       ],
     },
@@ -459,95 +427,57 @@ const content = {
       ekibimiz: "Our Team", // Renamed from search
     },
     dropdownSubtitles: {
-      cozumlerimiz: "Explore Products",
-      sektorler: "OW offers optimized solutions tailored for various sectors.",
+      cozumlerimiz: "Innovative Transport Technologies for Smart Cities",
+      sektorler: "OW offers optimized smart city solutions tailored for various sectors.",
       basariHikayeleri: "Real data, real results.",
       iletisim: "How can we optimize for you?",
-      ekibimiz: "Science, technology, and urban living combined.", // New subtitle for Ekibimiz
+      ekibimiz: "Science, technology, and urban living combined.",
     },
     hakkimizda: {
       bizKimiz: {
         title: "Who Are We?",
-        desc1: "OW is a technology company that makes the world healthier and more livable by giving meaning to data.",
+        desc1: "OW (Optimize the World) set out to provide scientific and technological solutions to urban mobility challenges faced by cities on a global scale.",
         desc2:
-          "With our solutions ranging from healthcare systems to urban transportation, we enable faster decisions, smarter systems, and more humane cities.",
+          "Our goal is to transform public transportation networks through data-driven approaches, advanced optimization algorithms, and AI-powered systems, making cities smarter, more efficient, more accessible, and environmentally more sustainable for the future.",
       },
       vizyonMisyon: {
         title: "Vision - Mission",
         visionTitle: "Our Vision",
-        visionDesc1: "To build a data-driven world.",
+        visionDesc1: "Shaping the cities of the future.",
         visionDesc2:
-          "We are designing a future where every individual, every city, and every system operates more efficiently.",
+          "We aim to contribute to the digital transformation of cities with themes of Smart Cities, Smart People, Smart Economy, Smart Environment, Smart Mobility, Smart Transport, Smart Governance, and Smart Life.",
         missionTitle: "Our Mission",
-        missionDesc1: "To transform data into action.",
+        missionDesc1: "Developing data-driven smart city solutions.",
         missionDesc2:
-          "We develop human-centric, ethical, and sustainable technologies that optimize decisions in healthcare and urban living.",
+          "We develop technologies that optimize public transportation systems, human-centered, ethical, and sustainable. We operate with the motto 'Technology in Development, Future in Innovation'.",
       },
     },
     products: {
-      healthSystems: {
-        title: "Health Systems",
-        subtitle: "Data-powered healthcare decisions.",
-        items: [
-          {
-            id: "ow-insight",
-            title: "OW Insight™",
-            icon: Stethoscope,
-            iconColor: "text-blue-600",
-            shortDescription: "Instantly make sense of complex medical data.",
-            longDescription: `It gathers multi-source data such as patient history, lab results, imaging data, and clinical notes, analyzing them with user-friendly graphics and intuitive dashboards. Real-time analysis capability enables clinicians to make quick and informed decisions. Data-driven transparency increases not only treatment processes but also patient trust.`,
-          },
-          {
-            id: "ow-decisions",
-            title: "OW Decisions™",
-            icon: Activity,
-            iconColor: "text-green-600",
-            shortDescription: "Support treatment decisions with artificial intelligence.",
-            longDescription: `The clinical decision support system analyzes patient-specific health data to provide the most appropriate diagnosis and treatment recommendations. Compatible with current medical protocols, this system offers measurable risk analyses and scenario-based recommendations, empowering doctors to make decisions one step ahead.`,
-          },
-          {
-            id: "ow-signals",
-            title: "OW Signals™",
-            icon: AlertTriangle,
-            iconColor: "text-red-600",
-            shortDescription: "Act proactively with critical data.",
-            longDescription: `It processes continuous data vital for intensive care and chronic patient monitoring. It detects anomalies in vital parameters such as heart rate, oxygen levels, and respiration in real-time, alerting clinical staff in advance. This prevents complications and shortens emergency response times.`,
-          },
-          {
-            id: "clinical-data-analysis",
-            title: "Clinical Data Analysis & Decision Support",
-            icon: Hospital,
-            iconColor: "text-purple-600",
-            shortDescription: "Data is no longer just a record, but a guide.",
-            longDescription: `It prevents healthcare organizations from getting lost in their daily data deluge. Data analytics increases diagnostic accuracy, personalizes treatment processes, and makes resource utilization more efficient. Machine learning-backed analyses provide doctors with data-driven clarity in decision-making processes.`,
-          },
-          {
-            id: "hospital-integration",
-            title: "Hospital, Clinic & Family Medicine Integration",
-            icon: Dna,
-            iconColor: "text-indigo-600",
-            shortDescription: "Unite all levels of healthcare under one intelligent umbrella.",
-            longDescription: `The OW platform integrates all layers of the healthcare service chain: Hospital, polyclinic, family medicine, and laboratory systems work in data harmony. This integration provides holistic health monitoring throughout the patient's life cycle and eliminates repetitive tests, information loss, and waste of time and cost.`,
-          },
-        ],
-      },
-      healthyCities: {
-        title: "Healthy City Solutions",
-        subtitle: "Data-planned, human-centric cities.",
+      smartMobility: {
+        title: "Smart Mobility Solutions",
+        subtitle: "We transform public transportation networks through data-driven approaches, advanced optimization algorithms, and AI-powered systems.",
         items: [
           {
             id: "ow-transitopt",
             title: "OW TransitOpt™",
             icon: Car,
             iconColor: "text-blue-600",
-            shortDescription: "Rethink transportation lines scientifically.",
-            longDescription: `It enables the data-driven restructuring of public transportation lines. With vehicle-route matching, garage-route distance optimization, and fleet capacity balance, it reduces operating costs and increases passenger satisfaction. Simulation-backed planning ensures the right resources, on the right line, at the right time.`,
+            shortDescription: "Frequency Optimization: Precision Planning Based on Real Demand",
+            longDescription: `We optimize service intervals with scientific forecasting and proprietary algorithms, achieving maximum efficiency with minimum vehicles. Our models analyze passenger flow patterns, weather conditions, and special events in real-time to provide optimal service intervals. This enables public transportation services to be dynamically adjusted based on instant demands, minimizing unnecessary empty trips and significantly reducing passenger wait times.`,
+          },
+          {
+            id: "ow-fleetopt",
+            title: "OW FleetOpt™",
+            icon: Bus,
+            iconColor: "text-green-600",
+            shortDescription: "Fleet Optimization: Smarter Resource Allocation, Lower Costs",
+            longDescription: `By combining mathematical and intuitive approaches, we align your fleet's capacity with temporal demand patterns and minimize dead mileage. Advanced algorithms ensure optimal vehicle and driver distribution across your network. This directly contributes to the most efficient use of vehicles, reduced fuel consumption, and lower operational costs.`,
           },
           {
             id: "ow-ridersense",
             title: "OW RiderSense™",
             icon: TrendingUp,
-            iconColor: "text-green-600",
+            iconColor: "text-purple-600",
             shortDescription: "Predict passenger density in advance.",
             longDescription: `Real-time passenger movements combine with historical data and behavioral analyses. This system predicts hourly, regional, and seasonal passenger densities, enabling dynamic scheduling for transportation planners. Proactive service increases at crowded stops and resource optimization during low density become possible.`,
           },
@@ -559,68 +489,66 @@ const content = {
             shortDescription: "Direct transportation investments to the right place.",
             longDescription: `By performing route-based cost analysis, it provides decision-makers with detailed and real-time budget visibility. It analyzes items such as fuel consumption, maintenance costs, personnel distribution, and cost per passenger, ensuring strategic investment planning and resource efficiency.`,
           },
+        ],
+      },
+      smartTransport: {
+        title: "Smart Transport Technologies",
+        subtitle: "Pioneering solutions in 'Smart Mobility' and 'Smart Transport' areas at the center of Smart Cities theme.",
+        items: [
           {
-            id: "transportation-network-optimization",
-            title: "Transportation Network Optimization",
-            icon: Bus,
+            id: "ow-drt",
+            title: "OW DRT™",
+            icon: Route,
             iconColor: "text-orange-600",
-            shortDescription: "Reshape every line in your city based on data.",
-            longDescription: `OW's optimization engine re-evaluates the entire city transportation map with algorithms. It identifies empty trips, improves low-efficiency lines with recommendations, and increases both the effectiveness and accessibility of public transportation. Passengers wait less, and the system spends less.`,
+            shortDescription: "Demand-Responsive Transit: Adaptive Transport for Rural and Low-Density Areas",
+            longDescription: `We pioneer flexible, demand-responsive public transportation solutions for underserved areas by combining user applications, route prediction, and real-time allocation. In rural and low-density areas where traditional fixed routes are inefficient, it enables instant route and service creation based on citizens' needs. With dynamic route determination and mobile-based reservation systems, it provides over 40% increase in service usage and over 200% expansion in coverage area in rural regions.`,
           },
           {
-            id: "urban-health-access-analysis",
-            title: "Urban Health Access Analysis",
+            id: "ow-accessibility",
+            title: "OW Accessibility™",
             icon: MapPin,
             iconColor: "text-red-600",
-            shortDescription: "Ensure fair access to healthcare for everyone.",
-            longDescription: `Public transport–health access integration.`,
+            shortDescription: "Accessibility Analysis: Digital Measurement for Urban Transit Access",
+            longDescription: `Using Big Data Analysis and multi-criteria decision-making methods like AHP/TOPSIS, we digitally determine urban public transportation access levels. This helps cities identify underserved areas and prioritize infrastructure improvements. We analyze in detail the access of disabled individuals, elderly, and other special needs groups to public transportation services.`,
           },
           {
-            id: "passenger-behavior-analysis",
-            title: "Passenger Behavior Analysis",
+            id: "ow-odmatrix",
+            title: "OW ODMatrix™",
             icon: BarChart3,
-            iconColor: "text-purple-600",
-            shortDescription: "Better understand city residents, manage flow accordingly.",
-            longDescription: `Data-driven user profiles and predictions.`,
+            iconColor: "text-indigo-600",
+            shortDescription: "Origin-Destination Matrices: Big Data-Supported Travel Model Analysis",
+            longDescription: `Our advanced OD matrices map travel patterns in your transit network using big data analytics and boarding prediction algorithms. This provides unprecedented insight into passenger flows, enabling targeted service improvements and resource allocation. Analyzing over 10 million data points, it achieves 94% route accuracy and over 60% planning efficiency.`,
           },
           {
-            id: "carbon-environmental-impact-modeling",
-            title: "Carbon & Environmental Impact Modeling",
-            icon: Leaf,
+            id: "ow-intelligence",
+            title: "OW Intelligence™",
+            icon: Brain,
             iconColor: "text-green-600",
-            shortDescription: "Optimize urban policies with a focus on sustainability.",
-            longDescription: `Emisyon azaltımı, çevresel risk haritaları, planlama desteği.`,
+            shortDescription: "Business Intelligence Solutions: Transform Transit Data into Actionable Information",
+            longDescription: `From data warehousing to dynamic Power BI dashboards, we centralize, analyze, and visualize public transportation data to reveal patterns, monitor key performance indicators (KPIs), and inform long-term transportation strategies. Real-time analytics supports evidence-based decision making. This enables city managers to monitor transportation network performance in real-time, identify problematic areas, and make strategic decisions for the future.`,
           },
         ],
       },
     },
     sectors: {
       subtitle:
-        "Our data-driven decision support infrastructure can be adapted to the unique dynamics of each organization.",
+        "Our smart city solutions can be adapted to the unique dynamics of each organization.",
       items: [
-        {
-          id: "hospitals-clinics",
-          title: "Hospitals & Clinics",
-          icon: BriefcaseMedical,
-          iconColor: "text-blue-600",
-          shortDescription: "Data-powered healthcare services from diagnosis to treatment.",
-          longDescription: `With OW products, patient data is instantly analyzed, risks are predicted, and treatment processes are accelerated. Clinical decisions are now more accurate, and systems are more efficient.`,
-        },
         {
           id: "municipalities-transport",
           title: "Municipalities & Transport Departments",
           icon: Building,
           iconColor: "text-green-600",
           shortDescription: "Scientific planning power for urban transportation networks.",
-          longDescription: `With data-driven solutions such as route optimization, passenger density prediction, and carbon footprint analysis, public transportation systems become smarter and costs become lower.`,
+          longDescription: `With data-driven solutions such as route optimization, passenger density prediction, and carbon footprint analysis, public transportation systems become smarter and costs become lower. We provide proven results with 30% time savings, 25% cost reduction, and 99.9% uptime.`,
         },
         {
           id: "smart-city-projects",
           title: "Smart City Projects",
           icon: City,
           iconColor: "text-purple-600",
-          shortDescription: "Urban intelligence that integrates health, transportation, and environmental data.",
-          longDescription: `OW enables sustainable, human-centric urban life by analyzing the different infrastructure systems of cities under a single roof.`,
+          shortDescription: "Urban intelligence focused on Smart Mobility and Smart Transport.",
+          longDescription: `OW enables sustainable, human-centric urban life by analyzing the different infrastructure systems of cities under a single roof. We provide solutions with themes of Smart Cities, Smart People, Smart Economy, Smart Environment, Smart Mobility, Smart Transport, Smart Governance, and Smart Life.`,
         },
         {
           id: "universities-research",
@@ -628,15 +556,23 @@ const content = {
           icon: GraduationCap,
           iconColor: "text-orange-600",
           shortDescription: "Powerful data infrastructure and AI support for scientific analyses.",
-          longDescription: `An ideal platform for cleaning, analyzing, and visualizing large datasets in research projects. It especially supports data-driven academic studies in the fields of health and urban planning.`,
+          longDescription: `An ideal platform for cleaning, analyzing, and visualizing large datasets in research projects. It especially supports data-driven academic studies in the fields of smart city planning and transportation. We collaborate with İKÇÜ and Yaşar University to strengthen the region's R&D and innovation capacity.`,
         },
         {
           id: "ministries-public",
-          title: "Ministries & Public Institutions",
+          title: "Transport Ministries & Public Institutions",
           icon: Government,
           iconColor: "text-red-600",
-          shortDescription: "Shape national health policies with data.",
-          longDescription: `OW offers comprehensive analysis and monitoring tools to public institutions in the areas of decision support systems, epidemiological modeling, and system integration. It forms the basis of data-driven policy production.`,
+          shortDescription: "Shape national smart transport policies with data.",
+          longDescription: `In the fields of decision support systems, transport modeling, and system integration, OW provides comprehensive analysis and monitoring tools to public institutions. It forms the foundation of data-driven policy production. We support R&D and innovation activities within the scope of Law No. 5746.`,
+        },
+        {
+          id: "technology-startups",
+          title: "Technology Startups & Start-ups",
+          icon: Sparkles,
+          iconColor: "text-blue-600",
+          shortDescription: "Support for innovative projects, patent acquisition, and company formation.",
+          longDescription: `As OW, we are a start-up company with high potential to commercialize our innovative business ideas and meet with investors with patent and license values. We accelerate our growth with the support of the ecosystem we operate in.`,
         },
       ],
     },
@@ -1145,12 +1081,12 @@ export default function HomePage() {
 
               {activeDropdown === "cozumlerimiz" && (
                 <div className="space-y-4">
-                  {/* Sağlık Sistemleri Toggle */}
+                  {/* Akıllı Hareketlilik Çözümleri Toggle */}
                   <div className="transition-all duration-500 delay-200 animate-in slide-in-from-left-2 fade-in">
                     <div className="flex items-center justify-between py-2">
                       <div className="flex items-center gap-3">
                         <span className="text-sm text-gray-700 font-medium">
-                          {currentContent.products.healthSystems.title}
+                          {currentContent.products.smartMobility.title}
                         </span>
                       </div>
                       <button
@@ -1167,13 +1103,13 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    {/* Sağlık Sistemleri Genişleyebilen İçerik */}
+                    {/* Akıllı Hareketlilik Çözümleri Genişleyebilen İçerik */}
                     {showHealthSystems && (
                       <div className="mt-4 p-4 bg-white/20 rounded-lg border border-white/20 transition-all duration-500 animate-in slide-in-from-top-2 fade-in">
                         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
-                          <p className="text-gray-600 italic mb-3">{currentContent.products.healthSystems.subtitle}</p>
+                          <p className="text-gray-600 italic mb-3">{currentContent.products.smartMobility.subtitle}</p>
 
-                          {currentContent.products.healthSystems.items.map((product) => {
+                          {currentContent.products.smartMobility.items.map((product) => {
                             return (
                               <button
                                 key={product.id}
@@ -1197,12 +1133,12 @@ export default function HomePage() {
                     )}
                   </div>
 
-                  {/* Sağlıklı Kent Çözümleri Toggle */}
+                  {/* Akıllı Ulaşım Teknolojileri Toggle */}
                   <div className="transition-all duration-500 delay-300 animate-in slide-in-from-left-2 fade-in">
                     <div className="flex items-center justify-between py-2">
                       <div className="flex items-center gap-3">
                         <span className="text-sm text-gray-700 font-medium">
-                          {currentContent.products.healthyCities.title}
+                          {currentContent.products.smartTransport.title}
                         </span>
                       </div>
                       <button
@@ -1219,13 +1155,13 @@ export default function HomePage() {
                       </button>
                     </div>
 
-                    {/* Sağlıklı Kent Çözümleri Genişleyebilen İçerik */}
+                    {/* Akıllı Ulaşım Teknolojileri Genişleyebilen İçerik */}
                     {showHealthyCities && (
                       <div className="mt-4 p-4 bg-white/20 rounded-lg border border-white/20 transition-all duration-500 animate-in slide-in-from-top-2 fade-in">
                         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
-                          <p className="text-gray-600 italic mb-3">{currentContent.products.healthyCities.subtitle}</p>
+                          <p className="text-gray-600 italic mb-3">{currentContent.products.smartTransport.subtitle}</p>
 
-                          {currentContent.products.healthyCities.items.map((product) => {
+                          {currentContent.products.smartTransport.items.map((product) => {
                             return (
                               <button
                                 key={product.id}
@@ -1710,12 +1646,12 @@ export default function HomePage() {
                   className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                 >
                   <option value="">{selectedLanguage === "TR" ? "Lütfen Seçiniz" : "Please Select"}</option>
-                  {currentContent.products.healthSystems.items.map((p) => (
+                  {currentContent.products.smartMobility.items.map((p) => (
                     <option key={p.id} value={p.id}>
                       {p.title}
                     </option>
                   ))}
-                  {currentContent.products.healthyCities.items.map((p) => (
+                  {currentContent.products.smartTransport.items.map((p) => (
                     <option key={p.id} value={p.id}>
                       {p.title}
                     </option>
@@ -1827,7 +1763,7 @@ export default function HomePage() {
           onClick={handleCtaClick} // Updated onClick to open the new modal
           className="bg-[#EBECEC]/60 rounded-xl text-gray-700 hover:bg-[#EBECEC]/80 transition-all duration-300 px-4 py-3 sm:px-3 sm:py-2 shadow-lg hover:shadow-xl inline-flex items-center gap-3 sm:gap-2 min-w-[200px] sm:min-w-[180px] justify-between backdrop-blur-sm"
         >
-          <span className="text-xs sm:text-xs font-medium leading-tight">{selectedLanguage === "TR" ? "OW: veri analizinde yeni nesil yaklaşımlar" : "OW: next-generation approaches in data analysis"}</span>
+          <span className="text-xs sm:text-xs font-medium leading-tight">{selectedLanguage === "TR" ? "OW: akıllı şehirler için veri odaklı çözümler" : "OW: data-driven solutions for smart cities"}</span>
           <div className="w-7 h-7 sm:w-6 sm:h-6 rounded-full bg-white flex items-center justify-center shadow-sm">
             <ArrowRight className="w-4 h-4 text-[#0171E3]" />
           </div>
@@ -1853,8 +1789,8 @@ export default function HomePage() {
           </div>
           <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed">
             <div className="fading-text space-y-1">
-              <div>⌘ {selectedLanguage === "TR" ? "Sağlık Sistemleri için Akıllı Analitik" : "Smart Analytics for Health Systems"}</div>
-              <div>⌘ {selectedLanguage === "TR" ? "Sağlıklı Kent Çözümleri" : "Healthy City Solutions"}</div>
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
             </div>
           </div>
         </div>
