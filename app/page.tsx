@@ -1114,6 +1114,8 @@ export default function HomePage() {
   // Hero Image (single image with opacity animation)
   const heroImage = "/images/t4.png" // Updated to new image
 
+  const [showLangDropdown, setShowLangDropdown] = useState(false)
+
   const toggleDropdown = (menuItem: string) => {
     setActiveDropdown(activeDropdown === menuItem ? null : menuItem)
     // Close any detail modals or expanded items when main dropdown changes
