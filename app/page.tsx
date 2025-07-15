@@ -1235,13 +1235,13 @@ export default function HomePage() {
         }
 
         @keyframes alternating-text {
-          0%, 45% {
+          0%, 35% {
             opacity: 1;
           }
-          50%, 95% {
+          40%, 85% {
             opacity: 0;
           }
-          100% {
+          90%, 100% {
             opacity: 1;
           }
         }
@@ -1255,11 +1255,11 @@ export default function HomePage() {
         }
 
         .alternating-text-1 {
-          animation: alternating-text 6s ease-in-out infinite;
+          animation: alternating-text 8s ease-in-out infinite;
         }
 
         .alternating-text-2 {
-          animation: alternating-text 6s ease-in-out infinite reverse;
+          animation: alternating-text 8s ease-in-out infinite reverse;
         }
       `}</style>
 
