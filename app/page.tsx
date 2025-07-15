@@ -2152,13 +2152,13 @@ export default function HomePage() {
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-4 sm:left-10 z-20 text-left">
                     {/* Yarı saydam oval kutucuk */}
-          <div className="bg-gray-500/10 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-400/20 shadow-lg">
+          <div className="bg-gray-500/5 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-400/10 shadow-lg">
             <div className="flex flex-col gap-0 sm:gap-1 items-center">
               <span className="text-xs sm:text-sm lg:text-lg text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
               <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
-            </div>
+          </div>
             <div className="text-xs sm:text-sm lg:text-lg text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
-              <div className="fading-text space-y-1">
+            <div className="fading-text space-y-1">
                 <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
                 <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
               </div>
