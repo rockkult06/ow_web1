@@ -1234,32 +1234,12 @@ export default function HomePage() {
           }
         }
 
-        @keyframes alternating-text {
-          0%, 35% {
-            opacity: 1;
-          }
-          40%, 85% {
-            opacity: 0;
-          }
-          90%, 100% {
-            opacity: 1;
-          }
-        }
-
         .hero-image-animated {
           animation: pulse-opacity 7s ease-in-out infinite; /* Only opacity animation */
         }
 
         .fading-text {
           animation: fade-text 8s ease-in-out infinite;
-        }
-
-        .alternating-text-1 {
-          animation: alternating-text 8s ease-in-out infinite;
-        }
-
-        .alternating-text-2 {
-          animation: alternating-text 8s ease-in-out infinite reverse;
         }
       `}</style>
 
@@ -2171,18 +2151,14 @@ export default function HomePage() {
 
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-24 left-4 sm:bottom-20 sm:left-10 z-20 text-left">
-          <div className="flex flex-col gap-0 sm:gap-1 items-start">
-            <span className="text-base sm:text-2xl text-gray-800 font-medium" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem', zIndex: 30}}>Optimize the World</span>
-            <h1 className="text-5xl sm:text-9xl font-bold text-gray-900 leading-none tracking-wider" style={{zIndex: 30}}>OW</h1>
+          <div className="flex flex-col gap-0 sm:gap-1 items-center">
+            <span className="text-base sm:text-2xl text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
+            <h1 className="text-5xl sm:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
-          <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed" style={{zIndex: 30}}>
-            <div className="relative h-6 sm:h-8">
-              <div className="absolute inset-0 alternating-text-1" style={{zIndex: 31}}>
-                ⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}
-              </div>
-              <div className="absolute inset-0 alternating-text-2" style={{zIndex: 31}}>
-                ⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}
-              </div>
+          <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed">
+            <div className="fading-text space-y-1">
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
             </div>
           </div>
         </div>
