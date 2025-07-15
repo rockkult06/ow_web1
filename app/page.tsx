@@ -2151,8 +2151,8 @@ export default function HomePage() {
 
         {/* Mobilde hero görselinin hemen altında, desktop'ta sol altta */}
         <div className="absolute top-[calc(50%+200px)] sm:bottom-24 lg:bottom-20 left-1/2 -translate-x-1/2 sm:left-10 sm:translate-x-0 z-20 text-center sm:text-left">
-          <div className="flex flex-col gap-0 sm:gap-1 items-center sm:items-start justify-center">
-            <span className="text-sm sm:text-base lg:text-2xl text-gray-800 font-medium text-center sm:text-left" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
+          <div className="flex flex-col items-center sm:items-start">
+            <span className="text-sm sm:text-base lg:text-2xl text-gray-800 font-medium text-center sm:text-left" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-2.5rem', position: 'relative', zIndex: 1}}>Optimize the World</span>
             <h1 className="text-4xl sm:text-5xl lg:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
           <div className="text-xs sm:text-sm lg:text-xl text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
