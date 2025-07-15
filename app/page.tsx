@@ -736,37 +736,37 @@ const content = {
       description: "Building a smarter, more efficient world with data-driven smart city solutions.",
       overview:
         "OW is a multidisciplinary technology organization that develops data science, optimization algorithms, and artificial intelligence-based solutions for smart cities and urban infrastructure. Our main goal is to strengthen the decision-making processes of municipalities, transport departments, and public institutions using scientific methods, optimize resource utilization, and measurably increase service quality.",
-              expertiseAreas: {
-          title: "Our Areas of Expertise",
+      expertiseAreas: {
+        title: "Our Areas of Expertise",
           smartMobility: {
             title: "🚌 Smart Mobility Solutions",
-            description:
+          description:
               "OW provides data-driven technologies to institutions such as municipalities, transport departments, and transport ministries in the following areas:",
-            points: [
+          points: [
               "Public transportation network optimization",
               "Real-time passenger density prediction",
               "Dead mileage reduction",
               "Carbon emissions and environmental impact analysis",
               "Urban transport access modeling",
-            ],
-            products:
+          ],
+          products:
               "Our OW TransitOpt™, OW RiderSense™, and OW CostLogic™ product family, developed in this context, provides efficiency, speed, and cost-effectiveness in transport planning processes.",
-          },
+        },
           smartTransport: {
             title: "Smart Transport Technologies for Smart Cities",
-            description:
+          description:
               "OW provides high-accuracy analytical models and optimization tools for decision-makers in urban planning and public transportation management:",
-            points: [
+          points: [
               "Demand-responsive transit",
               "Accessibility analysis",
               "Origin-destination matrix analysis",
               "Business intelligence solutions",
               "Urban mobility modeling",
-            ],
-            products:
+          ],
+          products:
               "The OW DRT™, OW Accessibility™, and OW Intelligence™ solutions, developed for this purpose, support both the operational efficiency and sustainability goals of cities.",
-          },
         },
+      },
       scientificApproach: {
         title: "Scientific Approach and Multidisciplinary Team",
         description:
@@ -1921,7 +1921,7 @@ export default function HomePage() {
             <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4 sm:space-y-6">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
                 <div className="space-y-3 sm:space-y-4">
-                  <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
+              <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
                   <p className="text-sm sm:text-base">{selectedProduct.longDescription}</p>
                 </div>
                 <div className="flex justify-center lg:justify-end">
@@ -2081,32 +2081,32 @@ export default function HomePage() {
                   <div>
                                     <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
                   {currentContent.ctaModal.expertiseAreas.smartMobility.title}
-                </h5>
+                    </h5>
                 <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.smartMobility.description}</p>
                 <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
                   {currentContent.ctaModal.expertiseAreas.smartMobility.points.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
                 <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
                   {currentContent.ctaModal.expertiseAreas.smartMobility.products}
-                </p>
+                    </p>
                   </div>
 
                   {/* Sağlıklı Kentler */}
                   <div>
                                     <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
                   {currentContent.ctaModal.expertiseAreas.smartTransport.title}
-                </h5>
+                    </h5>
                 <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.smartTransport.description}</p>
                 <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
                   {currentContent.ctaModal.expertiseAreas.smartTransport.points.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
                 <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
                   {currentContent.ctaModal.expertiseAreas.smartTransport.products}
-                </p>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -2151,7 +2151,7 @@ export default function HomePage() {
 
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-4 sm:left-10 z-20 text-left">
-          {/* Yarı saydam oval kutucuk */}
+                    {/* Yarı saydam oval kutucuk */}
           <div className="bg-white/20 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-lg">
             <div className="flex flex-col gap-0 sm:gap-1 items-center">
               <span className="text-xs sm:text-sm lg:text-lg text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
