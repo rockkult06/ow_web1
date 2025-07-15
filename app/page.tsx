@@ -2117,8 +2117,8 @@ export default function HomePage() {
 
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-24 left-4 sm:bottom-20 sm:left-10 z-20 text-left">
-          <div className="flex flex-col gap-0 sm:gap-1">
-            <span className="text-base sm:text-2xl text-gray-800 font-medium text-right" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
+          <div className="flex flex-col gap-0 sm:gap-1 items-center">
+            <span className="text-base sm:text-2xl text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
             <h1 className="text-5xl sm:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
           <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed">
