@@ -2140,7 +2140,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0 z-10">
         {/* Ortalanmış Görsel - Tek görsel ve opaklık animasyonu */}
-        <div className="relative w-full max-w-[320px] h-[350px] sm:max-w-[338px] sm:h-[364px] lg:max-w-[650px] lg:h-[780px] -mt-16 sm:-mt-20 lg:mt-0">
+        <div className="relative w-full max-w-[380px] h-[420px] sm:max-w-[338px] sm:h-[364px] lg:max-w-[650px] lg:h-[780px] -mt-16 sm:-mt-20 lg:mt-0">
           <img
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
