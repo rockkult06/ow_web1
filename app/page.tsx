@@ -1350,12 +1350,12 @@ export default function HomePage() {
               <ChevronDown className="w-3 h-3 text-gray-600" />
             </button>
             {showLangDropdown && (
-              <div className="absolute right-0 mt-2 w-28 bg-white/80 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 z-50">
+              <div className="absolute right-0 mt-2 w-28 bg-white/40 backdrop-blur-md rounded-lg shadow-xl border border-white/20 z-50">
                 {["TR", "EN", "DE"].filter(l => l !== selectedLanguage).map(l => (
                   <button
                     key={l}
                     onClick={() => { setSelectedLanguage(l); setShowLangDropdown(false); }}
-                    className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-[#EBECEC]/70 rounded-lg transition-colors duration-200"
+                    className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-white/30 rounded-lg transition-colors duration-200"
                   >
                     {l === "TR" ? "Türkçe" : l === "EN" ? "English" : "Deutsch"}
                   </button>
