@@ -2140,7 +2140,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0 z-10">
         {/* Ortalanmış Görsel - Tek görsel ve opaklık animasyonu */}
-        <div className="relative w-full max-w-[280px] h-[300px] sm:max-w-[338px] sm:h-[364px] lg:max-w-[650px] lg:h-[780px] -mt-16 sm:-mt-20 lg:mt-0">
+        <div className="relative w-full max-w-[320px] h-[350px] sm:max-w-[338px] sm:h-[364px] lg:max-w-[650px] lg:h-[780px] -mt-16 sm:-mt-20 lg:mt-0">
           <img
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
@@ -2149,8 +2149,8 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Mobilde hero görselinin altında, desktop'ta sol altta */}
-        <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-1/2 -translate-x-1/2 sm:left-10 sm:translate-x-0 z-20 text-center sm:text-left">
+        {/* Mobilde hero görselinin hemen altında, desktop'ta sol altta */}
+        <div className="absolute top-[calc(50%+200px)] sm:bottom-24 lg:bottom-20 left-1/2 -translate-x-1/2 sm:left-10 sm:translate-x-0 z-20 text-center sm:text-left">
           <div className="flex flex-col gap-0 sm:gap-1 items-center sm:items-start">
             <span className="text-sm sm:text-base lg:text-2xl text-gray-800 font-medium text-center sm:text-left" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
             <h1 className="text-4xl sm:text-5xl lg:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
