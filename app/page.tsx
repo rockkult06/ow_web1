@@ -1194,13 +1194,13 @@ export default function HomePage() {
       <style jsx>{`
         @keyframes pulse-opacity {
           0% {
-            opacity: 1;
+            opacity: 0.7;
           }
           50% {
-            opacity: 0.5;
+            opacity: 0.4;
           }
           100% {
-            opacity: 1;
+            opacity: 0.7;
           }
         }
 
