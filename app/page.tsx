@@ -1241,6 +1241,34 @@ export default function HomePage() {
         .fading-text {
           animation: fade-text 8s ease-in-out infinite;
         }
+
+        @keyframes particle-text {
+          0% {
+            opacity: 0;
+            transform: scale(0.1) rotate(0deg);
+          }
+          20% {
+            opacity: 1;
+            transform: scale(1) rotate(360deg);
+          }
+          80% {
+            opacity: 1;
+            transform: scale(1) rotate(360deg);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(0.1) rotate(720deg);
+          }
+        }
+
+        .particle-text {
+          animation: particle-text 6s ease-in-out infinite;
+        }
+
+        .particle-text-delayed {
+          animation: particle-text 6s ease-in-out infinite;
+          animation-delay: 3s;
+        }
       `}</style>
 
       {/* Header */}
@@ -2156,9 +2184,9 @@ export default function HomePage() {
             <h1 className="text-5xl sm:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
           <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed">
-            <div className="fading-text space-y-1">
-              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
-              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
+            <div className="space-y-1">
+              <div className="particle-text">⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
+              <div className="particle-text-delayed">⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
             </div>
           </div>
         </div>
