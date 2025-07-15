@@ -1328,7 +1328,7 @@ export default function HomePage() {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => toggleDropdown("mobile-menu")}
-              className="bg-[#EBECEC]/55 rounded-xl px-6 py-3 shadow-md flex items-center gap-3 hover:bg-[#EBECEC]/70 transition-all duration-300 min-w-[130px] min-h-[44px]"
+              className="bg-[#EBECEC]/55 rounded-xl px-4 py-3 sm:px-6 sm:py-3 shadow-md flex items-center gap-2 sm:gap-3 hover:bg-[#EBECEC]/70 transition-all duration-300 min-w-[120px] sm:min-w-[130px] min-h-[44px]"
             >
               <span className="text-sm font-medium text-gray-900">{selectedLanguage === "TR" ? "Menü" : "Menu"}</span>
               <div className="w-5 h-5 flex flex-col justify-center space-y-1">
@@ -1392,8 +1392,8 @@ export default function HomePage() {
           <div
             className={`bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-4 sm:p-6 transform origin-top transition-all duration-1500 ease-in-out animate-in slide-in-from-top-1 fade-in scale-in-95 ${
               activeDropdown === 'mobile-menu' 
-                ? 'w-[280px]' 
-                : 'w-[95vw] sm:w-[580px]'
+                ? 'w-[280px] sm:w-[320px]' 
+                : 'w-[95vw] sm:w-[580px] max-w-[95vw]'
             }`}
             style={{
               transformOrigin: "top center",
@@ -1417,10 +1417,10 @@ export default function HomePage() {
             </div>
 
             {/* Content */}
-            <div className="space-y-4">
+            <div className="space-y-4 max-h-[60vh] sm:max-h-[70vh] overflow-y-auto">
               {/* Subtitle for all dropdowns except Hakkımızda and Ekibimiz (as Ekibimiz has its own subtitle) */}
               {activeDropdown !== "hakkimizda" && activeDropdown !== "ekibimiz" && (
-                              <p className="text-xs sm:text-sm text-gray-600 font-medium transition-all duration-800 delay-300 animate-in slide-in-from-left-2 fade-in">
+                <p className="text-xs sm:text-sm text-gray-600 font-medium transition-all duration-800 delay-300 animate-in slide-in-from-left-2 fade-in">
                   {currentContent.dropdownSubtitles[activeDropdown as keyof typeof currentContent.dropdownSubtitles]}
                 </p>
               )}
@@ -1727,60 +1727,60 @@ export default function HomePage() {
                         closeDropdown()
                         toggleDropdown("hakkimizda")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <Users className="w-4 h-4" />
-                      {currentContent.menu.hakkimizda}
+                      <Users className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.hakkimizda}</span>
                     </button>
                     <button
                       onClick={() => {
                         closeDropdown()
                         toggleDropdown("cozumlerimiz")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <Puzzle className="w-4 h-4" />
-                      {currentContent.menu.cozumlerimiz}
+                      <Puzzle className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.cozumlerimiz}</span>
                     </button>
                     <button
                       onClick={() => {
                         closeDropdown()
                         toggleDropdown("sektorler")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <Building className="w-4 h-4" />
-                      {currentContent.menu.sektorler}
+                      <Building className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.sektorler}</span>
                     </button>
                     <button
                       onClick={() => {
                         closeDropdown()
                         toggleDropdown("basari-hikayeleri")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <TrendingUp className="w-4 h-4" />
-                      {currentContent.menu.basariHikayeleri}
+                      <TrendingUp className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.basariHikayeleri}</span>
                     </button>
                     <button
                       onClick={() => {
                         closeDropdown()
                         toggleDropdown("iletisim")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <Handshake className="w-4 h-4" />
-                      {currentContent.menu.iletisim}
+                      <Handshake className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.iletisim}</span>
                     </button>
                     <button
                       onClick={() => {
                         closeDropdown()
                         toggleDropdown("ekibimiz")
                       }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-2"
+                      className="w-full text-left px-3 py-3 text-sm text-gray-700 hover:bg-white/30 rounded-lg transition-colors duration-200 flex items-center gap-3"
                     >
-                      <Brain className="w-4 h-4" />
-                      {currentContent.menu.ekibimiz}
+                      <Brain className="w-4 h-4 flex-shrink-0" />
+                      <span className="font-medium">{currentContent.menu.ekibimiz}</span>
                     </button>
                   </div>
                 </div>
@@ -1895,37 +1895,37 @@ export default function HomePage() {
       {/* Product Detail Modal */}
       {showProductDetail && selectedProduct && (
         <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center transition-all duration-500 ease-in-out animate-in fade-in"
+          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-500 ease-in-out animate-in fade-in"
           onClick={closeProductDetail}
         >
           <div
-            className="bg-white/40 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8 w-[95vw] sm:w-[700px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
+            className="bg-white/40 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-4 sm:p-6 lg:p-8 w-full max-w-[95vw] sm:max-w-[700px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
           >
-            <div className="flex items-center justify-between mb-6">
-              <div className="flex items-center gap-4">
+            <div className="flex items-center justify-between mb-4 sm:mb-6">
+              <div className="flex items-center gap-2 sm:gap-4 flex-1 min-w-0">
                 {selectedProduct.icon && (
                   <selectedProduct.icon
-                    className={`w-6 h-6 sm:w-8 sm:h-8 ${selectedProduct.iconColor} flex-shrink-0`}
+                    className={`w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 ${selectedProduct.iconColor} flex-shrink-0`}
                   />
                 )}
-                <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{selectedProduct.title}</h3>
+                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 truncate">{selectedProduct.title}</h3>
               </div>
               <button
                 onClick={closeProductDetail}
-                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200 flex-shrink-0"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
-            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="space-y-4">
-              <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
-              <p>{selectedProduct.longDescription}</p>
+            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+                <div className="space-y-3 sm:space-y-4">
+                  <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
+                  <p className="text-sm sm:text-base">{selectedProduct.longDescription}</p>
                 </div>
                 <div className="flex justify-center lg:justify-end">
-                  <div className="relative w-full max-w-[300px] h-[200px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 backdrop-blur-sm bg-white/10">
+                  <div className="relative w-full max-w-[280px] sm:max-w-[300px] h-[180px] sm:h-[200px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 backdrop-blur-sm bg-white/10">
                     <img
                       src={`/solutions/${getImageFileName(selectedProduct.id)}`}
                       alt={`${selectedProduct.title} visualization`}
@@ -1948,25 +1948,25 @@ export default function HomePage() {
       {/* Demo Form Modal */}
       {showDemoForm && (
         <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center transition-all duration-500 ease-in-out animate-in fade-in"
+          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-500 ease-in-out animate-in fade-in"
           onClick={closeDemoForm}
         >
           <div
-            className="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-6 sm:p-8 w-[95vw] sm:w-[500px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
+            className="bg-white/70 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-4 sm:p-6 lg:p-8 w-full max-w-[95vw] sm:max-w-[500px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+            <div className="flex items-center justify-between mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-1 min-w-0">
                 {currentContent.contact.items.find((item) => item.id === "demo-form")?.title}
               </h3>
               <button
                 onClick={closeDemoForm}
-                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200 flex-shrink-0"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
-            <form className="space-y-4 text-sm sm:text-base">
+            <form className="space-y-3 sm:space-y-4 text-sm sm:text-base">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   {selectedLanguage === "TR" ? "Adınız Soyadınız" : "Your Name"}
@@ -1975,7 +1975,7 @@ export default function HomePage() {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
                   required
                 />
               </div>
@@ -1987,7 +1987,7 @@ export default function HomePage() {
                   type="text"
                   id="organization"
                   name="organization"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
                   required
                 />
               </div>
@@ -1999,7 +1999,7 @@ export default function HomePage() {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
                   required
                 />
               </div>
@@ -2010,7 +2010,7 @@ export default function HomePage() {
                 <select
                   id="solution"
                   name="solution"
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
                 >
                   <option value="">{selectedLanguage === "TR" ? "Lütfen Seçiniz" : "Please Select"}</option>
                   {currentContent.products.smartMobility.items.map((p) => (
@@ -2032,13 +2032,13 @@ export default function HomePage() {
                 <textarea
                   id="message"
                   name="message"
-                  rows={4}
-                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                  rows={3}
+                  className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
               >
                 {selectedLanguage === "TR" ? "Gönder" : "Submit"}
               </button>
@@ -2050,61 +2050,61 @@ export default function HomePage() {
       {/* CTA Modal */}
       {showCtaModal && (
         <div
-          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center transition-all duration-500 ease-in-out animate-in fade-in"
+          className="fixed inset-0 bg-black/20 backdrop-blur-md z-50 flex items-center justify-center p-4 transition-all duration-500 ease-in-out animate-in fade-in"
           onClick={closeCtaModal}
         >
           <div
-            className="bg-white/40 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8 w-[95vw] sm:w-[800px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
+            className="bg-white/40 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-4 sm:p-6 lg:p-8 w-full max-w-[95vw] sm:max-w-[800px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900">{currentContent.ctaModal.title}</h3>
+            <div className="flex items-center justify-between mb-4 sm:mb-6">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 flex-1 min-w-0">{currentContent.ctaModal.title}</h3>
               <button
                 onClick={closeCtaModal}
-                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                className="w-8 h-8 flex items-center justify-center text-gray-500 hover:text-gray-700 transition-colors duration-200 flex-shrink-0"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
-            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-6">
+            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4 sm:space-y-6">
               <p className="font-medium text-gray-800">{currentContent.ctaModal.description}</p>
-              <p>{currentContent.ctaModal.overview}</p>
+              <p className="text-sm sm:text-base">{currentContent.ctaModal.overview}</p>
 
               {/* Uzmanlık Alanlarımız */}
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+                <h4 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
+                  <Brain className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
                   {currentContent.ctaModal.expertiseAreas.title}
                 </h4>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {/* Sağlık Sistemleri */}
                   <div>
-                    <h5 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
                       {currentContent.ctaModal.expertiseAreas.healthSystems.title}
                     </h5>
-                    <p className="mb-2">{currentContent.ctaModal.expertiseAreas.healthSystems.description}</p>
-                    <ul className="list-disc list-inside space-y-1 pl-4">
+                    <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.healthSystems.description}</p>
+                    <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
                       {currentContent.ctaModal.expertiseAreas.healthSystems.points.map((point, index) => (
                         <li key={index}>{point}</li>
                       ))}
                     </ul>
-                    <p className="mt-2 italic text-gray-600">
+                    <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
                       {currentContent.ctaModal.expertiseAreas.healthSystems.products}
                     </p>
                   </div>
 
                   {/* Sağlıklı Kentler */}
                   <div>
-                    <h5 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
                       {currentContent.ctaModal.expertiseAreas.healthyCities.title}
                     </h5>
-                    <p className="mb-2">{currentContent.ctaModal.expertiseAreas.healthyCities.description}</p>
-                    <ul className="list-disc list-inside space-y-1 pl-4">
+                    <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.healthyCities.description}</p>
+                    <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
                       {currentContent.ctaModal.expertiseAreas.healthyCities.points.map((point, index) => (
                         <li key={index}>{point}</li>
                       ))}
                     </ul>
-                    <p className="mt-2 italic text-gray-600">
+                    <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
                       {currentContent.ctaModal.expertiseAreas.healthyCities.products}
                     </p>
                   </div>
@@ -2113,11 +2113,11 @@ export default function HomePage() {
 
               {/* Bilimsel Yaklaşım ve Multidisipliner Ekip */}
               <div>
-                <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <FlaskConical className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
+                <h4 className="text-base sm:text-lg lg:text-xl font-bold text-gray-900 mb-3 sm:mb-4 flex items-center gap-2">
+                  <FlaskConical className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-600" />
                   {currentContent.ctaModal.scientificApproach.title}
                 </h4>
-                <p>{currentContent.ctaModal.scientificApproach.description}</p>
+                <p className="text-sm sm:text-base">{currentContent.ctaModal.scientificApproach.description}</p>
               </div>
             </div>
           </div>
@@ -2125,14 +2125,14 @@ export default function HomePage() {
       )}
 
       {/* CTA Button */}
-      <div className="absolute top-[75px] sm:top-[100px] left-1/2 -translate-x-1/2 z-30">
+      <div className="absolute top-[75px] sm:top-[100px] left-1/2 -translate-x-1/2 z-30 px-4">
         <button
           onClick={handleCtaClick} // Updated onClick to open the new modal
-          className="bg-[#EBECEC]/60 rounded-xl text-gray-700 hover:bg-[#EBECEC]/80 transition-all duration-300 px-4 py-3 sm:px-3 sm:py-2 shadow-lg hover:shadow-xl inline-flex items-center gap-3 sm:gap-2 min-w-[200px] sm:min-w-[180px] justify-between backdrop-blur-sm"
+          className="bg-[#EBECEC]/60 rounded-xl text-gray-700 hover:bg-[#EBECEC]/80 transition-all duration-300 px-3 py-2 sm:px-4 sm:py-3 shadow-lg hover:shadow-xl inline-flex items-center gap-2 sm:gap-3 min-w-[180px] sm:min-w-[200px] justify-between backdrop-blur-sm"
         >
-          <span className="text-xs sm:text-xs font-medium leading-tight">{selectedLanguage === "TR" ? "OW: akıllı şehirler için veri odaklı çözümler" : "OW: data-driven solutions for smart cities"}</span>
-          <div className="w-7 h-7 sm:w-6 sm:h-6 rounded-full bg-white flex items-center justify-center shadow-sm">
-            <ArrowRight className="w-4 h-4 text-[#0171E3]" />
+          <span className="text-xs sm:text-sm font-medium leading-tight">{selectedLanguage === "TR" ? "OW: akıllı şehirler için veri odaklı çözümler" : "OW: data-driven solutions for smart cities"}</span>
+          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center shadow-sm flex-shrink-0">
+            <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-[#0171E3]" />
           </div>
         </button>
       </div>
@@ -2140,7 +2140,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0 z-10">
         {/* Ortalanmış Görsel - Tek görsel ve opaklık animasyonu */}
-        <div className="relative w-full max-w-[338px] h-[364px] sm:max-w-[650px] sm:h-[780px] -mt-20 sm:mt-0">
+        <div className="relative w-full max-w-[280px] h-[300px] sm:max-w-[338px] sm:h-[364px] lg:max-w-[650px] lg:h-[780px] -mt-16 sm:-mt-20 lg:mt-0">
           <img
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
@@ -2150,12 +2150,12 @@ export default function HomePage() {
         </div>
 
         {/* Sol altta metin - Mobilde optimize */}
-        <div className="absolute bottom-24 left-4 sm:bottom-20 sm:left-10 z-20 text-left">
+        <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-4 sm:left-10 z-20 text-left">
           <div className="flex flex-col gap-0 sm:gap-1 items-center">
-            <span className="text-base sm:text-2xl text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
-            <h1 className="text-5xl sm:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
+            <span className="text-sm sm:text-base lg:text-2xl text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
-          <div className="text-sm sm:text-xl text-gray-700 mt-3 sm:mt-2 max-w-[320px] sm:max-w-none leading-relaxed">
+          <div className="text-xs sm:text-sm lg:text-xl text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
             <div className="fading-text space-y-1">
               <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
               <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
