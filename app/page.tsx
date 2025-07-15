@@ -2157,8 +2157,6 @@ export default function HomePage() {
           </div>
           <div className="text-xs sm:text-sm lg:text-xl text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
             <div className="fading-text space-y-1">
-              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
-              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
             </div>
           </div>
         </div>
