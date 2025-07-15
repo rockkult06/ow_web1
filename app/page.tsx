@@ -2104,7 +2104,7 @@ export default function HomePage() {
       </div>
 
       {/* Hero Section */}
-      <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0">
+      <main className="flex-grow relative flex items-center justify-center px-4 pt-4 sm:pt-0 z-10">
         {/* Ortalanmış Görsel - Tek görsel ve opaklık animasyonu */}
         <div className="relative w-full max-w-[338px] h-[364px] sm:max-w-[650px] sm:h-[780px] -mt-20 sm:mt-0">
           <img
