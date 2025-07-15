@@ -1354,7 +1354,7 @@ export default function HomePage() {
       {/* Dropdown Overlay */}
       {(activeDropdown || showProductDetail || showDemoForm || showCtaModal) && (
         <div
-          className="fixed inset-0 bg-black/10 backdrop-blur-sm z-30 transition-all duration-2000 ease-in-out animate-in fade-in"
+          className="fixed inset-0 bg-black/10 backdrop-blur-sm z-30 transition-all duration-1500 ease-in-out animate-in fade-in"
           onClick={
             activeDropdown
               ? closeDropdown
@@ -1369,13 +1369,13 @@ export default function HomePage() {
 
       {/* Dropdown Menu */}
       {activeDropdown && (
-        <div className={`absolute z-40 transition-all duration-2000 ease-in-out ${
+        <div className={`absolute z-40 transition-all duration-1500 ease-in-out ${
           activeDropdown === 'mobile-menu' 
             ? 'top-[60px] right-4 sm:top-[75px]' 
             : 'top-[60px] sm:top-[75px] left-1/2 transform -translate-x-1/2'
         }`}>
           <div
-            className={`bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-4 sm:p-6 transform origin-top transition-all duration-2000 ease-in-out animate-in slide-in-from-top-1 fade-in scale-in-95 ${
+            className={`bg-white/30 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-4 sm:p-6 transform origin-top transition-all duration-1500 ease-in-out animate-in slide-in-from-top-1 fade-in scale-in-95 ${
               activeDropdown === 'mobile-menu' 
                 ? 'w-[280px]' 
                 : 'w-[95vw] sm:w-[580px]'
@@ -1405,9 +1405,9 @@ export default function HomePage() {
             <div className="space-y-4">
               {/* Subtitle for all dropdowns except Hakkımızda and Ekibimiz (as Ekibimiz has its own subtitle) */}
               {activeDropdown !== "hakkimizda" && activeDropdown !== "ekibimiz" && (
-                <p className="text-xs sm:text-sm text-gray-600 font-medium transition-all duration-500 delay-200 animate-in slide-in-from-left-2 fade-in">
-                  {currentContent.dropdownSubtitles[activeDropdown as keyof typeof currentContent.dropdownSubtitles]}
-                </p>
+                              <p className="text-xs sm:text-sm text-gray-600 font-medium transition-all duration-800 delay-300 animate-in slide-in-from-left-2 fade-in">
+                {currentContent.dropdownSubtitles[activeDropdown as keyof typeof currentContent.dropdownSubtitles]}
+              </p>
               )}
 
               {activeDropdown === "cozumlerimiz" && (
