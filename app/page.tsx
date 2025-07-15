@@ -1436,21 +1436,21 @@ export default function HomePage() {
                         </span>
                       </div>
                       <button
-                        onClick={() => setShowHealthSystems(!showHealthSystems)}
+                        onClick={() => setShowSmartMobility(!showSmartMobility)}
                         className={`w-8 h-4 rounded-full relative transition-all duration-300 ${
-                          showHealthSystems ? "bg-blue-500" : "bg-gray-300"
+                          showSmartMobility ? "bg-blue-500" : "bg-gray-300"
                         }`}
                       >
                         <div
                           className={`w-3 h-3 bg-white rounded-full absolute top-0.5 shadow-sm transition-all duration-300 ${
-                            showHealthSystems ? "left-4" : "left-0.5"
+                            showSmartMobility ? "left-4" : "left-0.5"
                           }`}
                         ></div>
                       </button>
                     </div>
 
                     {/* Akıllı Hareketlilik Çözümleri Genişleyebilen İçerik */}
-                    {showHealthSystems && (
+                    {showSmartMobility && (
                       <div className="mt-4 p-4 bg-white/20 rounded-lg border border-white/20 transition-all duration-500 animate-in slide-in-from-top-2 fade-in">
                         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
                           <p className="text-gray-600 italic mb-3">{currentContent.products.smartMobility.subtitle}</p>
@@ -1488,21 +1488,21 @@ export default function HomePage() {
                         </span>
                       </div>
                       <button
-                        onClick={() => setShowHealthyCities(!showHealthyCities)}
+                        onClick={() => setShowSmartTransport(!showSmartTransport)}
                         className={`w-8 h-4 rounded-full relative transition-all duration-300 ${
-                          showHealthyCities ? "bg-blue-500" : "bg-gray-300"
+                          showSmartTransport ? "bg-blue-500" : "bg-gray-300"
                         }`}
                       >
                         <div
                           className={`w-3 h-3 bg-white rounded-full absolute top-0.5 shadow-sm transition-all duration-300 ${
-                            showHealthyCities ? "left-4" : "left-0.5"
+                            showSmartTransport ? "left-4" : "left-0.5"
                           }`}
                         ></div>
                       </button>
                     </div>
 
                     {/* Akıllı Ulaşım Teknolojileri Genişleyebilen İçerik */}
-                    {showHealthyCities && (
+                    {showSmartTransport && (
                       <div className="mt-4 p-4 bg-white/20 rounded-lg border border-white/20 transition-all duration-500 animate-in slide-in-from-top-2 fade-in">
                         <div className="space-y-4 text-xs sm:text-sm text-gray-700">
                           <p className="text-gray-600 italic mb-3">{currentContent.products.smartTransport.subtitle}</p>
