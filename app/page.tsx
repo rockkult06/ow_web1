@@ -2152,7 +2152,7 @@ export default function HomePage() {
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-4 sm:left-10 z-20 text-left">
                     {/* Yarı saydam oval kutucuk */}
-          <div className="bg-white/20 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-white/30 shadow-lg">
+          <div className="bg-gray-500/20 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-400/30 shadow-lg">
             <div className="flex flex-col gap-0 sm:gap-1 items-center">
               <span className="text-xs sm:text-sm lg:text-lg text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
               <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
