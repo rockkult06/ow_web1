@@ -2111,7 +2111,7 @@ export default function HomePage() {
             src={heroImage || "/placeholder.svg"}
             alt="3D rendered human head with neural network pattern overlay representing AI and medical data analysis"
             className="absolute inset-0 w-full h-full object-contain hero-image-animated"
-            style={{opacity:0.8}}
+            style={{opacity:0.7}}
           />
         </div>
 
