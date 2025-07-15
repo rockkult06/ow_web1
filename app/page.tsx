@@ -2020,7 +2020,7 @@ export default function HomePage() {
           onClick={closeCtaModal}
         >
           <div
-            className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-xl border border-white/10 p-6 sm:p-8 w-[95vw] sm:w-[800px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
+            className="bg-white/40 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 p-6 sm:p-8 w-[95vw] sm:w-[800px] max-h-[90vh] overflow-y-auto transform origin-center transition-all duration-500 ease-out animate-in zoom-in-95 fade-in"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex items-center justify-between mb-6">
