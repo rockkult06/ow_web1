@@ -1188,6 +1188,21 @@ export default function HomePage() {
 
   const currentContent = content[selectedLanguage as keyof typeof content]
 
+  // Function to get correct image filename based on product ID
+  const getImageFileName = (productId: string) => {
+    const imageMap: { [key: string]: string } = {
+      'ow-transitopt': 'transitOpt.PNG',
+      'ow-fleetopt': 'FleetOpt.jpg',
+      'ow-ridersense': 'RiderSense.jpg',
+      'ow-costlogic': 'CostLogic.jpg',
+      'ow-drt': 'DRT.jpg',
+      'ow-accessibility': 'accessibility.jpg',
+      'ow-odmatrix': 'ODmatrix.jpg',
+      'ow-intelligence': 'Intelligence.jpg'
+    }
+    return imageMap[productId] || 'placeholder.jpg'
+  }
+
   return (
     <div className="min-h-screen bg-white flex flex-col relative overflow-hidden">
       {/* CSS for Hero Image Animation and Slogan Sliding */}
@@ -1912,7 +1927,7 @@ export default function HomePage() {
                 <div className="flex justify-center lg:justify-end">
                   <div className="relative w-full max-w-[300px] h-[200px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 backdrop-blur-sm bg-white/10">
                     <img
-                      src={`/solutions/${selectedProduct.id.replace('ow-', '').toLowerCase()}.jpg`}
+                      src={`/solutions/${getImageFileName(selectedProduct.id)}`}
                       alt={`${selectedProduct.title} visualization`}
                       className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       onError={(e) => {
