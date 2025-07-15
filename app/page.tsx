@@ -2091,7 +2091,7 @@ export default function HomePage() {
       )}
 
       {/* CTA Button */}
-      <div className="absolute top-[75px] sm:top-[100px] left-1/2 -translate-x-1/2 z-10">
+      <div className="absolute top-[75px] sm:top-[100px] left-1/2 -translate-x-1/2 z-30">
         <button
           onClick={handleCtaClick} // Updated onClick to open the new modal
           className="bg-[#EBECEC]/60 rounded-xl text-gray-700 hover:bg-[#EBECEC]/80 transition-all duration-300 px-4 py-3 sm:px-3 sm:py-2 shadow-lg hover:shadow-xl inline-flex items-center gap-3 sm:gap-2 min-w-[200px] sm:min-w-[180px] justify-between backdrop-blur-sm"
