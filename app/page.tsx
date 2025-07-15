@@ -1903,9 +1903,28 @@ export default function HomePage() {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-4">
-              <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
-              <p>{selectedProduct.longDescription}</p>
+            <div className="text-sm sm:text-base text-gray-700 leading-relaxed space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <p className="font-medium text-gray-800">{selectedProduct.shortDescription}</p>
+                  <p>{selectedProduct.longDescription}</p>
+                </div>
+                <div className="flex justify-center lg:justify-end">
+                  <div className="relative w-full max-w-[300px] h-[200px] rounded-xl overflow-hidden shadow-2xl border-2 border-white/20 backdrop-blur-sm bg-white/10">
+                    <img
+                      src={`/solutions/${selectedProduct.id.replace('ow-', '').toLowerCase()}.jpg`}
+                      alt={`${selectedProduct.title} visualization`}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                      onError={(e) => {
+                        // Fallback to PNG if JPG doesn't exist
+                        const target = e.target as HTMLImageElement;
+                        target.src = target.src.replace('.jpg', '.PNG');
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
