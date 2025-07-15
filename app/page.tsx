@@ -2170,8 +2170,8 @@ export default function HomePage() {
         loop
         muted
         playsInline
-        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-10"
-        style={{opacity:0.10}}
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-5"
+        style={{opacity:0.05}}
       >
         <source src="/2.mp4" type="video/mp4" />
       </video>
