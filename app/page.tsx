@@ -368,44 +368,44 @@ const content = {
     },
     ctaModal: {
       title: "OW – Optimize the World",
-      description: "Veri odaklı karar destek sistemleriyle daha sağlıklı, daha verimli bir dünya inşa ediyoruz.",
+      description: "Veri odaklı akıllı şehir çözümleriyle daha akıllı, daha verimli bir dünya inşa ediyoruz.",
       overview:
-        "OW, sağlık sistemleri ve kentsel altyapılar için veri bilimi, optimizasyon algoritmaları ve yapay zekâ temelli çözümler geliştiren çok disiplinli bir teknoloji kuruluşudur. Temel hedefimiz; kamu ve özel sektör kurumlarının karar alma süreçlerini bilimsel yöntemlerle güçlendirmek, kaynak kullanımını optimize etmek ve hizmet kalitesini ölçülebilir biçimde artırmaktır.",
+        "OW, akıllı şehirler ve kentsel altyapılar için veri bilimi, optimizasyon algoritmaları ve yapay zeka tabanlı çözümler geliştiren çok disiplinli bir teknoloji kuruluşudur. Temel hedefimiz; belediyeler, ulaşım daireleri ve kamu kurumlarının karar alma süreçlerini bilimsel yöntemlerle güçlendirmek, kaynak kullanımını optimize etmek ve hizmet kalitesini ölçülebilir biçimde artırmaktır.",
       expertiseAreas: {
         title: "Uzmanlık Alanlarımız",
-        healthSystems: {
-          title: "🩺 Sağlık Sistemleri İçin Karar Destek Çözümleri",
+        smartMobility: {
+          title: "🚌 Akıllı Hareketlilik Çözümleri",
           description:
-            "OW; hastaneler, klinikler, aile sağlığı merkezleri ve sağlık bakanlıkları gibi sağlık hizmet sunucularına yönelik olarak, aşağıdaki konularda veri destekli teknolojiler sunar:",
+            "OW; belediyeler, ulaşım daireleri ve ulaşım bakanlıkları gibi kurumlara yönelik olarak, aşağıdaki konularda veri destekli teknolojiler sunar:",
           points: [
-            "Klinik karar destek sistemleri",
-            "Gerçek zamanlı sağlık verisi analizi",
-            "Risk skorlamaları ve erken uyarı algoritmaları",
-            "Sağlık hizmet zinciri entegrasyonu",
-            "Hasta profilleme ve tedavi optimizasyonu",
+            "Toplu taşıma ağı optimizasyonu",
+            "Gerçek zamanlı yolcu yoğunluğu tahmini",
+            "Boş kilometre azaltma",
+            "Karbon emisyonu ve çevresel etki analizleri",
+            "Kentsel ulaşım erişim modellemesi",
           ],
           products:
-            "Bu kapsamda geliştirdiğimiz OW Insight™, OW Decisions™ ve OW Signals™ ürün ailesi, tanı-tedavi süreçlerinde doğruluk, hız ve maliyet etkinliği sağlar.",
+            "Bu kapsamda geliştirdiğimiz OW TransitOpt™, OW RiderSense™ ve OW CostLogic™ ürün ailesi, ulaşım planlama süreçlerinde verimlilik, hız ve maliyet etkinliği sağlar.",
         },
-        healthyCities: {
-          title: "Sağlıklı Kentler için Akıllı Kentsel Sistemler",
+        smartTransport: {
+          title: "Akıllı Şehirler İçin Akıllı Ulaşım Teknolojileri",
           description:
-            "OW, şehir planlamasında ve toplu taşıma yönetiminde karar vericilere yönelik yüksek doğruluklu analitik modeller ve optimizasyon araçları sunar:",
+            "OW, şehir planlama ve toplu taşıma yönetimindeki karar vericiler için yüksek doğruluklu analitik modeller ve optimizasyon araçları sunar:",
           points: [
-            "Ulaşım ağı optimizasyonu",
-            "Yolcu yoğunluğu tahmini",
-            "Ölü kilometre (dead mileage) azaltımı",
-            "Karbon salımı ve çevresel etki analizleri",
-            "Kentsel sağlık hizmetlerine erişim modellemeleri",
+            "Talep bazlı toplu taşıma",
+            "Erişilebilirlik analizi",
+            "Kaynak-hedef matris analizi",
+            "İş zekası çözümleri",
+            "Kentsel hareketlilik modellemesi",
           ],
           products:
-            "Bu doğrultuda geliştirilen OW TransitOpt™, OW RiderSense™ ve OW CostLogic™ çözümleri, kentlerin hem operasyonel verimliliğini hem de sürdürülebilirlik hedeflerini destekler.",
+            "Bu amaçla geliştirilen OW DRT™, OW Accessibility™ ve OW Intelligence™ çözümleri, şehirlerin hem operasyonel verimlilik hem de sürdürülebilirlik hedeflerini destekler.",
         },
       },
       scientificApproach: {
-        title: "Bilimsel Yaklaşım ve Multidisipliner Ekip",
+        title: "Bilimsel Yaklaşım ve Çok Disiplinli Ekip",
         description:
-          "OW bünyesindeki ekip; istatistik, ekonomi, sistem mühendisliği, şehir planlama, bilgisayar bilimi ve sağlık bilimleri gibi farklı alanlardan gelen uzmanlardan oluşur. Bu sayede her çözümümüz; akademik geçerliliği olan, sahada test edilmiş ve yüksek etki potansiyeli taşıyan yapılar üzerine inşa edilir.",
+          "OW içindeki ekip, istatistik, ekonomi, sistem mühendisliği, şehir planlama, bilgisayar bilimi ve ulaşım bilimleri gibi farklı alanlardan uzmanlardan oluşur. Böylece, her çözümümüz akademik olarak doğrulanmış, sahada test edilmiş ve yüksek etki potansiyeline sahip yapılar üzerine inşa edilir.",
       },
     },
   },
@@ -733,44 +733,44 @@ const content = {
     },
     ctaModal: {
       title: "OW – Optimize the World",
-      description: "Veri odaklı karar destek sistemleriyle daha akıllı, daha verimli bir dünya inşa ediyoruz.",
+      description: "Building a smarter, more efficient world with data-driven smart city solutions.",
       overview:
-        "OW, akıllı şehirler ve kentsel altyapılar için veri bilimi, optimizasyon algoritmaları ve yapay zeka tabanlı çözümler geliştiren çok disiplinli bir teknoloji organizasyonudur. Ana hedefimiz, kamu ve özel sektör kurumlarının karar verme süreçlerini bilimsel yöntemlerle güçlendirmek, kaynak kullanımını optimize etmek ve hizmet kalitesini ölçülebilir şekilde artırmaktır.",
-      expertiseAreas: {
-        title: "Uzmanlık Alanlarımız",
-        healthSystems: {
-          title: "🚌 Akıllı Hareketlilik Çözümleri",
-          description:
-            "OW, belediyeler, ulaşım daireleri ve ulaşım bakanlıkları gibi kurumlara aşağıdaki alanlarda veri destekli teknolojiler sunar:",
-          points: [
-            "Toplu taşıma ağı optimizasyonu",
-            "Gerçek zamanlı yolcu yoğunluğu tahmini",
-            "Boş kilometre azaltma",
-            "Karbon emisyonu ve çevresel etki analizleri",
-            "Kentsel ulaşım erişim modellemesi",
-          ],
-          products:
-            "Bu bağlamda geliştirilen OW TransitOpt™, OW RiderSense™ ve OW CostLogic™ ürün ailemiz, ulaşım planlama süreçlerinde verimlilik, hız ve maliyet etkinliği sağlar.",
+        "OW is a multidisciplinary technology organization that develops data science, optimization algorithms, and artificial intelligence-based solutions for smart cities and urban infrastructure. Our main goal is to strengthen the decision-making processes of municipalities, transport departments, and public institutions using scientific methods, optimize resource utilization, and measurably increase service quality.",
+              expertiseAreas: {
+          title: "Our Areas of Expertise",
+          smartMobility: {
+            title: "🚌 Smart Mobility Solutions",
+            description:
+              "OW provides data-driven technologies to institutions such as municipalities, transport departments, and transport ministries in the following areas:",
+            points: [
+              "Public transportation network optimization",
+              "Real-time passenger density prediction",
+              "Dead mileage reduction",
+              "Carbon emissions and environmental impact analysis",
+              "Urban transport access modeling",
+            ],
+            products:
+              "Our OW TransitOpt™, OW RiderSense™, and OW CostLogic™ product family, developed in this context, provides efficiency, speed, and cost-effectiveness in transport planning processes.",
+          },
+          smartTransport: {
+            title: "Smart Transport Technologies for Smart Cities",
+            description:
+              "OW provides high-accuracy analytical models and optimization tools for decision-makers in urban planning and public transportation management:",
+            points: [
+              "Demand-responsive transit",
+              "Accessibility analysis",
+              "Origin-destination matrix analysis",
+              "Business intelligence solutions",
+              "Urban mobility modeling",
+            ],
+            products:
+              "The OW DRT™, OW Accessibility™, and OW Intelligence™ solutions, developed for this purpose, support both the operational efficiency and sustainability goals of cities.",
+          },
         },
-        healthyCities: {
-          title: "Akıllı Şehirler İçin Akıllı Ulaşım Teknolojileri",
-          description:
-            "OW, şehir planlama ve toplu taşıma yönetimindeki karar vericiler için yüksek doğruluklu analitik modeller ve optimizasyon araçları sunar:",
-          points: [
-            "Talep bazlı toplu taşıma",
-            "Erişilebilirlik analizi",
-            "Kaynak-hedef matris analizi",
-            "İş zekası çözümleri",
-            "Kentsel hareketlilik modellemesi",
-          ],
-          products:
-            "Bu amaçla geliştirilen OW DRT™, OW Accessibility™ ve OW Intelligence™ çözümleri, şehirlerin hem operasyonel verimlilik hem de sürdürülebilirlik hedeflerini destekler.",
-        },
-      },
       scientificApproach: {
-        title: "Bilimsel Yaklaşım ve Çok Disiplinli Ekip",
+        title: "Scientific Approach and Multidisciplinary Team",
         description:
-          "OW içindeki ekip, istatistik, ekonomi, sistem mühendisliği, şehir planlama, bilgisayar bilimi ve ulaşım bilimleri gibi farklı alanlardan uzmanlardan oluşur. Böylece, her çözümümüz akademik olarak doğrulanmış, sahada test edilmiş ve yüksek etki potansiyeline sahip yapılar üzerine inşa edilir.",
+          "The team within OW consists of experts from different fields such as statistics, economics, systems engineering, urban planning, computer science, and transportation sciences. Thus, each of our solutions is built on academically validated, field-tested structures with high impact potential.",
       },
     },
   },
@@ -1048,40 +1048,40 @@ const content = {
     },
     ctaModal: {
       title: "OW – Optimize the World",
-      description: "Wir bauen eine intelligentere, effizientere Welt mit datengestützten Entscheidungsunterstützungssystemen.",
+      description: "Wir bauen eine intelligentere, effizientere Welt mit datengestützten Smart-City-Lösungen.",
       overview:
-        "OW ist eine multidisziplinäre Technologieorganisation, die Lösungen basierend auf Datenwissenschaft, Optimierungsalgorithmen und künstlicher Intelligenz für Smart Cities und urbane Infrastrukturen entwickelt. Unser Hauptziel ist es, die Entscheidungsprozesse von öffentlichen und privaten Sektoreinrichtungen mit wissenschaftlichen Methoden zu stärken, Ressourcennutzung zu optimieren und Servicequalität messbar zu erhöhen.",
-      expertiseAreas: {
-        title: "Unsere Fachgebiete",
-        healthSystems: {
-          title: "🚌 Smart Mobility Lösungen",
-          description:
-            "OW bietet datengestützte Technologien für Verkehrsbetriebe, Gemeinden und Verkehrsministerien in folgenden Bereichen:",
-          points: [
-            "Verkehrsnetzoptimierung",
-            "Echtzeit-Passagierdichtevorhersage",
-            "Tote-Kilometer-Reduzierung",
-            "CO2-Emissionen und Umweltauswirkungsanalysen",
-            "Urbane Verkehrszugangsmodellierung",
-          ],
-          products:
-            "Unsere OW TransitOpt™, OW RiderSense™ und OW CostLogic™ Produktfamilie, entwickelt in diesem Kontext, bietet Effizienz, Geschwindigkeit und Kosteneffektivität in Verkehrsplanungsprozessen.",
+        "OW ist eine multidisziplinäre Technologieorganisation, die Lösungen basierend auf Datenwissenschaft, Optimierungsalgorithmen und künstlicher Intelligenz für Smart Cities und urbane Infrastrukturen entwickelt. Unser Hauptziel ist es, die Entscheidungsprozesse von Gemeinden, Verkehrsabteilungen und öffentlichen Einrichtungen mit wissenschaftlichen Methoden zu stärken, Ressourcennutzung zu optimieren und Servicequalität messbar zu erhöhen.",
+              expertiseAreas: {
+          title: "Unsere Fachgebiete",
+          smartMobility: {
+            title: "🚌 Smart Mobility Lösungen",
+            description:
+              "OW bietet datengestützte Technologien für Verkehrsbetriebe, Gemeinden und Verkehrsministerien in folgenden Bereichen:",
+            points: [
+              "Verkehrsnetzoptimierung",
+              "Echtzeit-Passagierdichtevorhersage",
+              "Tote-Kilometer-Reduzierung",
+              "CO2-Emissionen und Umweltauswirkungsanalysen",
+              "Urbane Verkehrszugangsmodellierung",
+            ],
+            products:
+              "Unsere OW TransitOpt™, OW RiderSense™ und OW CostLogic™ Produktfamilie, entwickelt in diesem Kontext, bietet Effizienz, Geschwindigkeit und Kosteneffektivität in Verkehrsplanungsprozessen.",
+          },
+          smartTransport: {
+            title: "Smart Transport Technologien für Smart Cities",
+            description:
+              "OW bietet hochgenaue analytische Modelle und Optimierungstools für Entscheidungsträger in der Stadtplanung und im öffentlichen Verkehrsmanagement:",
+            points: [
+              "Bedarfsgesteuerter Verkehr",
+              "Zugänglichkeitsanalyse",
+              "Ursprung-Ziel-Matrixanalyse",
+              "Business Intelligence Lösungen",
+              "Urbane Mobilitätsmodellierung",
+            ],
+            products:
+              "Die OW DRT™, OW Accessibility™ und OW Intelligence™ Lösungen, entwickelt für diesen Zweck, unterstützen sowohl die betriebliche Effizienz als auch die Nachhaltigkeitsziele von Städten.",
+          },
         },
-        healthyCities: {
-          title: "Smart Transport Technologien für Smart Cities",
-          description:
-            "OW bietet hochgenaue analytische Modelle und Optimierungstools für Entscheidungsträger in der Stadtplanung und im öffentlichen Verkehrsmanagement:",
-          points: [
-            "Bedarfsgesteuerter Verkehr",
-            "Zugänglichkeitsanalyse",
-            "Ursprung-Ziel-Matrixanalyse",
-            "Business Intelligence Lösungen",
-            "Urbane Mobilitätsmodellierung",
-          ],
-          products:
-            "Die OW DRT™, OW Accessibility™ und OW Intelligence™ Lösungen, entwickelt für diesen Zweck, unterstützen sowohl die betriebliche Effizienz als auch die Nachhaltigkeitsziele von Städten.",
-        },
-      },
       scientificApproach: {
         title: "Wissenschaftlicher Ansatz und multidisziplinäres Team",
         description:
@@ -1098,8 +1098,8 @@ export default function HomePage() {
   // Correct individual state hooks
   const [showWhoWeAre, setShowWhoWeAre] = useState(false)
   const [showVisionMission, setShowVisionMission] = useState(false)
-  const [showHealthSystems, setShowHealthSystems] = useState(false)
-  const [showHealthyCities, setShowHealthyCities] = useState(false)
+  const [showSmartMobility, setShowSmartMobility] = useState(false)
+  const [showSmartTransport, setShowSmartTransport] = useState(false)
   // New states for individual item expansion
   const [openSectorId, setOpenSectorId] = useState<string | null>(null)
   const [openStoryId, setOpenStoryId] = useState<string | null>(null)
@@ -2079,34 +2079,34 @@ export default function HomePage() {
                 <div className="space-y-3 sm:space-y-4">
                   {/* Sağlık Sistemleri */}
                   <div>
-                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                      {currentContent.ctaModal.expertiseAreas.healthSystems.title}
-                    </h5>
-                    <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.healthSystems.description}</p>
-                    <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
-                      {currentContent.ctaModal.expertiseAreas.healthSystems.points.map((point, index) => (
-                        <li key={index}>{point}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
-                      {currentContent.ctaModal.expertiseAreas.healthSystems.products}
-                    </p>
+                                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  {currentContent.ctaModal.expertiseAreas.smartMobility.title}
+                </h5>
+                <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.smartMobility.description}</p>
+                <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
+                  {currentContent.ctaModal.expertiseAreas.smartMobility.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+                <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
+                  {currentContent.ctaModal.expertiseAreas.smartMobility.products}
+                </p>
                   </div>
 
                   {/* Sağlıklı Kentler */}
                   <div>
-                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
-                      {currentContent.ctaModal.expertiseAreas.healthyCities.title}
-                    </h5>
-                    <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.healthyCities.description}</p>
-                    <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
-                      {currentContent.ctaModal.expertiseAreas.healthyCities.points.map((point, index) => (
-                        <li key={index}>{point}</li>
-                      ))}
-                    </ul>
-                    <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
-                      {currentContent.ctaModal.expertiseAreas.healthyCities.products}
-                    </p>
+                                    <h5 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-800 mb-2 flex items-center gap-2">
+                  {currentContent.ctaModal.expertiseAreas.smartTransport.title}
+                </h5>
+                <p className="mb-2 text-sm sm:text-base">{currentContent.ctaModal.expertiseAreas.smartTransport.description}</p>
+                <ul className="list-disc list-inside space-y-1 pl-4 text-sm sm:text-base">
+                  {currentContent.ctaModal.expertiseAreas.smartTransport.points.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+                <p className="mt-2 italic text-gray-600 text-sm sm:text-base">
+                  {currentContent.ctaModal.expertiseAreas.smartTransport.products}
+                </p>
                   </div>
                 </div>
               </div>
