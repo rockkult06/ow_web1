@@ -2151,17 +2151,14 @@ export default function HomePage() {
 
         {/* Sol altta metin - Mobilde optimize */}
         <div className="absolute bottom-16 sm:bottom-24 lg:bottom-20 left-4 sm:left-10 z-20 text-left">
-                    {/* Yarı saydam oval kutucuk */}
-          <div className="bg-gray-500/3 backdrop-blur-sm rounded-3xl px-4 py-3 sm:px-6 sm:py-4 border border-gray-400/5 shadow-lg">
-            <div className="flex flex-col gap-0 sm:gap-1 items-center">
-              <span className="text-xs sm:text-sm lg:text-lg text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
-              <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
+          <div className="flex flex-col gap-0 sm:gap-1 items-center">
+            <span className="text-sm sm:text-base lg:text-2xl text-gray-800 font-medium text-center" style={{width: 'fit-content', maxWidth: '100%', marginBottom: '-0.5rem'}}>Optimize the World</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-9xl font-bold text-gray-900 leading-none tracking-wider">OW</h1>
           </div>
-            <div className="text-xs sm:text-sm lg:text-lg text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
+          <div className="text-xs sm:text-sm lg:text-xl text-gray-700 mt-2 sm:mt-3 lg:mt-2 max-w-[280px] sm:max-w-[320px] lg:max-w-none leading-relaxed">
             <div className="fading-text space-y-1">
-                <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
-                <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
-              </div>
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Hareketlilik Çözümleri" : "Smart Mobility Solutions"}</div>
+              <div>⌘ {selectedLanguage === "TR" ? "Akıllı Ulaşım Teknolojileri" : "Smart Transport Technologies"}</div>
             </div>
           </div>
         </div>
@@ -2173,8 +2170,8 @@ export default function HomePage() {
         loop
         muted
         playsInline
-        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-10"
-        style={{opacity:0.1}}
+        className="fixed inset-0 w-full h-full object-cover z-0 pointer-events-none opacity-5"
+        style={{opacity:0.05}}
       >
         <source src="/2.mp4" type="video/mp4" />
       </video>
