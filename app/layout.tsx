@@ -189,12 +189,8 @@ export default function RootLayout({
                 page_location: 'https://www.optimizeworld.net',
                 send_page_view: true,
                 anonymize_ip: true,
-                cookie_flags: 'SameSite=None;Secure',
-                debug_mode: true
+                cookie_flags: 'SameSite=None;Secure'
               });
-              
-              // Debug için console log
-              console.log('Google Analytics loaded with ID: G-30XM7GYBBH');
             `,
           }}
         />
