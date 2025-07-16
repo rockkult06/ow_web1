@@ -176,7 +176,7 @@ export default function RootLayout({
         {/* Google Analytics */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+          src="https://www.googletagmanager.com/gtag/js?id=G-30XM7GYBBH"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -184,10 +184,12 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-XXXXXXXXXX', {
+              gtag('config', 'G-30XM7GYBBH', {
                 page_title: 'Optimize the World - Akıllı Şehir Teknolojileri',
                 page_location: 'https://www.optimizeworld.net',
-                send_page_view: true
+                send_page_view: true,
+                anonymize_ip: true,
+                cookie_flags: 'SameSite=None;Secure'
               });
             `,
           }}
