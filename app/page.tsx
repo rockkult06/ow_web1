@@ -1,4 +1,5 @@
-import { Metadata } from 'next'
+"use client"
+
 import {
   ArrowRight,
   Sparkles,
@@ -41,60 +42,6 @@ import {
   Phone,
 } from "lucide-react"
 import { useState } from "react"
-
-// SEO Metadata
-export const metadata: Metadata = {
-  title: 'Optimize the World (OW) - Akıllı Şehir ve Ulaşım Teknolojileri',
-  description: 'OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması. Akıllı hareketlilik, veri entegrasyonu ve sürdürülebilir şehir çözümleri.',
-  keywords: [
-    'akıllı şehir',
-    'akıllı ulaşım',
-    'akıllı hareketlilik',
-    'şehir teknolojileri',
-    'ulaşım optimizasyonu',
-    'veri entegrasyonu',
-    'sürdürülebilir şehir',
-    'OW',
-    'Optimize the World',
-    'smart city',
-    'smart mobility',
-    'smart transport',
-    'urban technology',
-    'transportation optimization',
-    'data integration',
-    'sustainable city'
-  ],
-  openGraph: {
-    title: 'Optimize the World (OW) - Akıllı Şehir ve Ulaşım Teknolojileri',
-    description: 'OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması.',
-    url: 'https://www.optimizeworld.net',
-    siteName: 'Optimize the World',
-    images: [
-      {
-        url: '/images/hero-serenity-head.png',
-        width: 1200,
-        height: 630,
-        alt: 'Optimize the World - Akıllı Şehir Teknolojileri',
-      },
-    ],
-    locale: 'tr_TR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Optimize the World (OW) - Akıllı Şehir ve Ulaşım Teknolojileri',
-    description: 'OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması.',
-    images: ['/images/hero-serenity-head.png'],
-  },
-  alternates: {
-    canonical: 'https://www.optimizeworld.net',
-    languages: {
-      'tr-TR': 'https://www.optimizeworld.net',
-      'en-US': 'https://www.optimizeworld.net/en',
-      'de-DE': 'https://www.optimizeworld.net/de',
-    },
-  },
-}
 
 // --- Content Data (Turkish & English) ---
 const content = {
@@ -2226,96 +2173,6 @@ export default function HomePage() {
       >
         <source src="/2.mp4" type="video/mp4" />
       </video>
-
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Optimize the World (OW)",
-            "url": "https://www.optimizeworld.net",
-            "description": "OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması.",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://www.optimizeworld.net/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            },
-            "publisher": {
-              "@type": "Organization",
-              "name": "Optimize the World",
-              "url": "https://www.optimizeworld.net",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.optimizeworld.net/images/placeholder-logo.png"
-              }
-            }
-          })
-        }}
-      />
-
-      {/* Organization Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Optimize the World (OW)",
-            "url": "https://www.optimizeworld.net",
-            "logo": "https://www.optimizeworld.net/images/placeholder-logo.png",
-            "description": "OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması.",
-            "foundingDate": "2020",
-            "address": {
-              "@type": "PostalAddress",
-              "addressCountry": "TR",
-              "addressLocality": "Istanbul"
-            },
-            "contactPoint": {
-              "@type": "ContactPoint",
-              "contactType": "customer service",
-              "availableLanguage": ["Turkish", "English", "German"]
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/optimize-the-world",
-              "https://twitter.com/optimizeworld",
-              "https://www.facebook.com/optimizeworld"
-            ],
-            "serviceArea": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 41.0082,
-                "longitude": 28.9784
-              },
-              "geoRadius": "10000"
-            },
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Akıllı Şehir Çözümleri",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Akıllı Hareketlilik Çözümleri",
-                    "description": "Akıllı şehir hareketlilik teknolojileri ve optimizasyon çözümleri"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Akıllı Ulaşım Teknolojileri",
-                    "description": "Gelişmiş ulaşım teknolojileri ve veri entegrasyonu çözümleri"
-                  }
-                }
-              ]
-            }
-          })
-        }}
-      />
 
     </div>
   )
