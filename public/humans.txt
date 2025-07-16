@@ -1,0 +1,13 @@
+/* TEAM */
+    Developer: Optimize the World Team
+    Contact: info@optimizeworld.net
+    From: Istanbul, Turkey
+
+/* SITE */
+    Last update: 2024/12/19
+    Language: Turkish, English, German
+    Doctype: HTML5
+    IDE: Visual Studio Code
+    Standards: HTML5, CSS3, JavaScript ES6+
+    Components: React, Next.js, Tailwind CSS
+    Software: Node.js, npm, Git 

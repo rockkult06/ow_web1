@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimize the World (OW) - Akıllı Şehir Teknolojileri</title>
+    <link>https://www.optimizeworld.net</link>
+    <description>OW (Optimize the World), akıllı şehir teknolojileri ve akıllı ulaşım çözümleri sunan lider teknoloji firması.</description>
+    <language>tr</language>
+    <lastBuildDate>Thu, 19 Dec 2024 12:00:00 +0300</lastBuildDate>
+    <atom:link href="https://www.optimizeworld.net/feed.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Akıllı Şehir Teknolojileri ve Geleceğimiz</title>
+      <link>https://www.optimizeworld.net/blog/smart-city-technologies</link>
+      <description>Akıllı şehir teknolojileri nasıl geleceğimizi şekillendiriyor? OW'nin vizyonu ve çözümleri hakkında detaylı bilgi.</description>
+      <pubDate>Thu, 19 Dec 2024 12:00:00 +0300</pubDate>
+      <guid>https://www.optimizeworld.net/blog/smart-city-technologies</guid>
+    </item>
+    
+    <item>
+      <title>Akıllı Ulaşım Sistemleri ve Veri Entegrasyonu</title>
+      <link>https://www.optimizeworld.net/blog/smart-transport-systems</link>
+      <description>Modern şehirlerde akıllı ulaşım sistemlerinin önemi ve veri entegrasyonu ile sağlanan faydalar.</description>
+      <pubDate>Wed, 18 Dec 2024 12:00:00 +0300</pubDate>
+      <guid>https://www.optimizeworld.net/blog/smart-transport-systems</guid>
+    </item>
+    
+    <item>
+      <title>Sürdürülebilir Şehir Çözümleri</title>
+      <link>https://www.optimizeworld.net/blog/sustainable-city-solutions</link>
+      <description>Çevre dostu ve sürdürülebilir şehir çözümleri ile gelecek nesillere daha iyi bir dünya bırakma hedefimiz.</description>
+      <pubDate>Tue, 17 Dec 2024 12:00:00 +0300</pubDate>
+      <guid>https://www.optimizeworld.net/blog/sustainable-city-solutions</guid>
+    </item>
+  </channel>
+</rss> 
