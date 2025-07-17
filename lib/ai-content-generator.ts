@@ -66,7 +66,7 @@ export interface ContentStructure {
 
 export interface ContentSection {
   name: string;
-  type: 'heading' | 'paragraph' | 'list' | 'quote' | 'image' | 'cta';
+  type: 'heading' | 'paragraph' | 'list' | 'quote' | 'image' | 'cta' | 'faq';
   required: boolean;
   minWords?: number;
   maxWords?: number;

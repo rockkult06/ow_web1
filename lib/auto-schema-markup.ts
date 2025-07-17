@@ -80,7 +80,7 @@ export interface SchemaGenerator {
 
 export class AutoSchemaMarkup {
   private schemas: SchemaMarkup[] = [];
-  private config: AutoSchemaConfig;
+  private config!: AutoSchemaConfig;
 
   constructor() {
     this.initializeConfig();
