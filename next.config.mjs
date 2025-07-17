@@ -2,10 +2,17 @@
 const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
+    optimizeCss: true,
+    scrollRestoration: true,
   },
   images: {
     domains: ['optimizeworld.net'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   // Enterprise SEO Optimizations
   async headers() {
@@ -50,16 +57,6 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: false,
-  // Advanced Image Optimization
-  images: {
-    ...nextConfig.images,
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-  },
   // Bundle Analysis and Optimization
   webpack: (config, { dev, isServer }) => {
     // Production optimizations
@@ -108,14 +105,6 @@ const nextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
-  // Advanced Compression
-  experimental: {
-    ...nextConfig.experimental,
-    optimizeCss: true,
-    scrollRestoration: true,
-    legacyBrowsers: false,
-    browsersListForSwc: true,
-  },
 }
 
-module.exports = nextConfig
+export default nextConfig
