@@ -263,4 +263,60 @@ export const generateBreadcrumbSchema = (breadcrumbs: Array<{name: string, url: 
       "item": crumb.url
     }))
   }
+}
+
+export const generateBlogPostingSchema = (post: {
+  title: string
+  description: string
+  url: string
+  author: string
+  datePublished: string
+  dateModified: string
+  image?: string
+  category: string
+  tags: string[]
+}) => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.description,
+    "url": post.url,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "OW - Optimize the World",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://optimizeworld.net/images/logo.png"
+      }
+    },
+    "datePublished": post.datePublished,
+    "dateModified": post.dateModified,
+    "image": post.image || "https://optimizeworld.net/images/blog-default.jpg",
+    "articleSection": post.category,
+    "keywords": post.tags.join(", "),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": post.url
+    }
+  }
+}
+
+export const generateBlogSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "OptimizeWorld Blog",
+    "description": "Lojistik optimizasyonu, sürü yönetimi ve veri analizi hakkında güncel blog yazıları",
+    "url": "https://optimizeworld.net/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "OW - Optimize the World"
+    },
+    "inLanguage": "tr-TR"
+  }
 } 

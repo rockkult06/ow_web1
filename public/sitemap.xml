@@ -127,4 +127,40 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Blog Sayfaları -->
+  <url>
+    <loc>https://optimizeworld.net/blog/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/lojistik-optimizasyonu-2024</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/suru-yonetimi-ipuclari</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/rota-planlama-algoritmalari</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/veri-analizi-lojistik</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset> 

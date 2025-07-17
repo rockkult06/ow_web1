@@ -53,6 +53,7 @@ const content = {
       cozumlerimiz: "Çözümlerimiz",
       sektorler: "Sektörler",
       basariHikayeleri: "Başarı Hikayeleri",
+      blog: "Blog",
       iletisim: "İletişim",
       ekibimiz: "Ekibimiz",
     },
@@ -82,6 +83,7 @@ const content = {
       cozumlerimiz: "Solutions",
       sektorler: "Sectors",
       basariHikayeleri: "Success Stories",
+      blog: "Blog",
       iletisim: "Contact",
       ekibimiz: "Our Team",
     },
@@ -111,6 +113,7 @@ const content = {
       cozumlerimiz: "Unsere Lösungen",
       sektorler: "Sektoren",
       basariHikayeleri: "Erfolgsgeschichten",
+      blog: "Blog",
       iletisim: "Kontakt",
       ekibimiz: "Unser Team",
     },
@@ -235,6 +238,12 @@ export default function HomePage() {
               >
                 {currentContent.menu.basariHikayeleri}
               </button>
+              <a
+                href="/blog"
+                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600"
+              >
+                {currentContent.menu.blog}
+              </a>
               <button
                 onClick={() => toggleDropdown("iletisim")}
                 data-menu="iletisim"

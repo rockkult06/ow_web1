@@ -1,6 +1,10 @@
 User-agent: *
 Allow: /
 
+# Blog sayfaları
+Allow: /blog/
+Allow: /blog/*
+
 # Sitemap
 Sitemap: https://optimizeworld.net/sitemap.xml
 
