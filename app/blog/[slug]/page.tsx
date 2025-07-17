@@ -1,17 +1,20 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { generateBlogPostingSchema } from '@/lib/structured-data'
 import { BlogAnalytics } from '@/components/blog-analytics'
 import { BlogLink } from '@/components/blog-links'
+import { SocialShare } from '@/components/social-share'
 
 // Blog post verileri
 const blogPosts = {
   'lojistik-optimizasyonu-2024': {
     title: '2024\'te Lojistik Optimizasyonu: Yeni Trendler',
     excerpt: 'Yapay zeka ve makine öğrenmesi ile lojistik süreçlerin nasıl optimize edileceğini keşfedin.',
+    image: '/images/blog/lojistik-optimizasyon.jpg',
     content: `
       <h2>Giriş</h2>
       <p>2024 yılında lojistik sektörü, teknolojik gelişmelerle birlikte büyük bir dönüşüm geçiriyor. Yapay zeka, makine öğrenmesi ve IoT teknolojileri, geleneksel lojistik süreçlerini optimize etmek için kullanılıyor.</p>
@@ -34,6 +37,7 @@ const blogPosts = {
   'suru-yonetimi-ipuclari': {
     title: 'Etkili Sürü Yönetimi İçin 10 İpucu',
     excerpt: 'Sürü yönetiminde verimliliği artırmak için kanıtlanmış stratejiler.',
+    image: '/images/blog/suru-yonetimi.jpg',
     content: `
       <h2>Giriş</h2>
       <p>Etkili sürü yönetimi, modern lojistik operasyonlarının temel taşıdır. Bu yazıda, sürü yönetiminde verimliliği artırmak için 10 kanıtlanmış ipucunu paylaşıyoruz.</p>
@@ -65,6 +69,7 @@ const blogPosts = {
   'rota-planlama-algoritmalari': {
     title: 'Rota Planlama Algoritmaları: Hangi Yöntem En İyi?',
     excerpt: 'Farklı rota planlama algoritmalarının karşılaştırması ve kullanım alanları.',
+    image: '/images/blog/rota-planlama.jpg',
     content: `
       <h2>Giriş</h2>
       <p>Rota planlama, lojistik operasyonların en kritik bileşenlerinden biridir. Bu yazıda, farklı rota planlama algoritmalarını ve kullanım alanlarını inceleyeceğiz.</p>
@@ -93,6 +98,7 @@ const blogPosts = {
   'veri-analizi-lojistik': {
     title: 'Lojistikte Veri Analizi: Karar Verme Süreçleri',
     excerpt: 'Büyük veri analizi ile lojistik kararlarını nasıl iyileştirebilirsiniz.',
+    image: '/images/blog/veri-analizi.jpg',
     content: `
       <h2>Giriş</h2>
       <p>Veri analizi, modern lojistik operasyonlarının vazgeçilmez bir parçasıdır. Bu yazıda, veri analizinin lojistik karar verme süreçlerindeki rolünü inceleyeceğiz.</p>
@@ -142,6 +148,23 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       type: 'article',
       publishedTime: post.date,
       authors: [post.author],
+      url: `https://optimizeworld.net/blog/${params.slug}`,
+      siteName: 'OptimizeWorld',
+      images: [
+        {
+          url: post.image || 'https://optimizeworld.net/images/blog-default.jpg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [post.image || 'https://optimizeworld.net/images/blog-default.jpg'],
+      creator: '@optimizeworld',
     },
   }
 }
@@ -217,6 +240,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </header>
 
+          {/* Featured Image */}
+          {post.image && (
+            <div className="my-8">
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={1200}
+                height={630}
+                className="w-full h-auto rounded-lg shadow-lg"
+                priority
+              />
+            </div>
+          )}
+
           {/* Article Content */}
           <div className="prose prose-lg max-w-none">
             <div dangerouslySetInnerHTML={{ __html: post.content }} />
@@ -233,6 +270,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               ))}
             </div>
           </div>
+
+          {/* Social Share */}
+          <SocialShare 
+            url={`https://optimizeworld.net/blog/${params.slug}`}
+            title={post.title}
+            description={post.excerpt}
+            hashtags={post.tags}
+          />
 
           {/* Related Posts */}
           <div className="mt-12 pt-8 border-t border-gray-200">

@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge'
 import { generateBlogSchema } from '@/lib/structured-data'
 import { BlogLink } from '@/components/blog-links'
+import { SocialShare } from '@/components/social-share'
 
 export const metadata: Metadata = {
   title: 'Blog - OptimizeWorld | Lojistik ve Optimizasyon Çözümleri',
@@ -163,6 +164,16 @@ export default function BlogPage() {
               RSS Feed
             </a>
           </div>
+        </div>
+
+        {/* Social Share for Blog Page */}
+        <div className="mt-8">
+          <SocialShare 
+            url="https://optimizeworld.net/blog"
+            title="OptimizeWorld Blog"
+            description="Lojistik optimizasyonu, sürü yönetimi ve veri analizi hakkında güncel blog yazıları"
+            hashtags={['lojistik', 'optimizasyon', 'blog']}
+          />
         </div>
       </div>
     </div>

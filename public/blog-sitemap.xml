@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Blog Ana Sayfası -->
+  <url>
+    <loc>https://optimizeworld.net/blog/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://optimizeworld.net/images/blog-hero.jpg</image:loc>
+      <image:title>OptimizeWorld Blog</image:title>
+    </image:image>
+  </url>
+
+  <!-- Blog Yazıları -->
+  <url>
+    <loc>https://optimizeworld.net/blog/lojistik-optimizasyonu-2024</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>OptimizeWorld Blog</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-15T12:00:00+03:00</news:publication_date>
+      <news:title>2024'te Lojistik Optimizasyonu: Yeni Trendler</news:title>
+      <news:keywords>lojistik, optimizasyon, yapay zeka, 2024</news:keywords>
+      <news:stock_tickers>OW</news:stock_tickers>
+    </news:news>
+    <image:image>
+      <image:loc>https://optimizeworld.net/images/blog/lojistik-optimizasyon.jpg</image:loc>
+      <image:title>2024'te Lojistik Optimizasyonu: Yeni Trendler</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/suru-yonetimi-ipuclari</loc>
+    <lastmod>2024-01-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>OptimizeWorld Blog</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-10T12:00:00+03:00</news:publication_date>
+      <news:title>Etkili Sürü Yönetimi İçin 10 İpucu</news:title>
+      <news:keywords>sürü yönetimi, verimlilik, optimizasyon, lojistik</news:keywords>
+      <news:stock_tickers>OW</news:stock_tickers>
+    </news:news>
+    <image:image>
+      <image:loc>https://optimizeworld.net/images/blog/suru-yonetimi.jpg</image:loc>
+      <image:title>Etkili Sürü Yönetimi İçin 10 İpucu</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/rota-planlama-algoritmalari</loc>
+    <lastmod>2024-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>OptimizeWorld Blog</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-05T12:00:00+03:00</news:publication_date>
+      <news:title>Rota Planlama Algoritmaları: Hangi Yöntem En İyi?</news:title>
+      <news:keywords>rota planlama, algoritma, optimizasyon, lojistik</news:keywords>
+      <news:stock_tickers>OW</news:stock_tickers>
+    </news:news>
+    <image:image>
+      <image:loc>https://optimizeworld.net/images/blog/rota-planlama.jpg</image:loc>
+      <image:title>Rota Planlama Algoritmaları: Hangi Yöntem En İyi?</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://optimizeworld.net/blog/veri-analizi-lojistik</loc>
+    <lastmod>2024-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <news:news>
+      <news:publication>
+        <news:name>OptimizeWorld Blog</news:name>
+        <news:language>tr</news:language>
+      </news:publication>
+      <news:publication_date>2024-01-01T12:00:00+03:00</news:publication_date>
+      <news:title>Lojistikte Veri Analizi: Karar Verme Süreçleri</news:title>
+      <news:keywords>veri analizi, lojistik, karar verme, optimizasyon</news:keywords>
+      <news:stock_tickers>OW</news:stock_tickers>
+    </news:news>
+    <image:image>
+      <image:loc>https://optimizeworld.net/images/blog/veri-analizi.jpg</image:loc>
+      <image:title>Lojistikte Veri Analizi: Karar Verme Süreçleri</image:title>
+    </image:image>
+  </url>
+
+</urlset> 

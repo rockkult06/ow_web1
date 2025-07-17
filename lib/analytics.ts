@@ -20,6 +20,13 @@ export const GA_EVENTS = {
   CONTACT_CLICK: 'contact_click',
   LANGUAGE_CHANGE: 'language_change',
   DEMO_REQUEST: 'demo_request',
+  BLOG_POST_VIEW: 'blog_post_view',
+  BLOG_POST_CLICK: 'blog_post_click',
+  BLOG_READ_MORE: 'blog_read_more_click',
+  BLOG_BACK_TO_LIST: 'blog_back_to_list',
+  BLOG_RELATED_POST: 'blog_related_post_click',
+  SOCIAL_SHARE: 'social_share',
+  COPY_LINK: 'copy_link',
 } as const
 
 // Custom event tracking
@@ -122,6 +129,58 @@ export const trackError = (errorType: string, errorMessage: string) => {
   trackEvent('error', {
     error_type: errorType,
     error_message: errorMessage,
+    page_location: window.location.pathname,
+  })
+}
+
+// Blog post view tracking
+export const trackBlogPostView = (postId: string, postTitle: string, category: string, author: string) => {
+  trackEvent(GA_EVENTS.BLOG_POST_VIEW, {
+    post_id: postId,
+    post_title: postTitle,
+    post_category: category,
+    post_author: author,
+    page_location: window.location.pathname,
+  })
+}
+
+// Blog post click tracking
+export const trackBlogPostClick = (postId: string, postTitle: string, category: string) => {
+  trackEvent(GA_EVENTS.BLOG_POST_CLICK, {
+    post_id: postId,
+    post_title: postTitle,
+    post_category: category,
+    page_location: window.location.pathname,
+  })
+}
+
+// Blog read more tracking
+export const trackBlogReadMore = (postId: string, postTitle: string, category: string) => {
+  trackEvent(GA_EVENTS.BLOG_READ_MORE, {
+    post_id: postId,
+    post_title: postTitle,
+    post_category: category,
+    page_location: window.location.pathname,
+  })
+}
+
+// Social share tracking
+export const trackSocialShare = (platform: string, url: string, title: string, contentType: string) => {
+  trackEvent(GA_EVENTS.SOCIAL_SHARE, {
+    platform,
+    url,
+    title,
+    content_type: contentType,
+    page_location: window.location.pathname,
+  })
+}
+
+// Copy link tracking
+export const trackCopyLink = (url: string, title: string, contentType: string) => {
+  trackEvent(GA_EVENTS.COPY_LINK, {
+    url,
+    title,
+    content_type: contentType,
     page_location: window.location.pathname,
   })
 } 
