@@ -43,6 +43,7 @@ import {
 } from "lucide-react"
 import { useState, useEffect } from "react"
 import { trackEvent, trackButtonClick, trackMenuInteraction, trackProductView, trackContactInteraction, trackLanguageChange, trackDemoRequest } from "@/lib/analytics"
+import { useConversionOptimization } from "@/lib/advanced-conversion-optimization"
 
 // --- Content Data (Turkish & English) ---
 const content = {
@@ -1117,6 +1118,8 @@ export default function HomePage() {
 
   const [showLangDropdown, setShowLangDropdown] = useState(false)
 
+  const { trackButtonClick: trackConversionClick, trackFormSubmit, trackPageView, applyABTest } = useConversionOptimization()
+
   const toggleDropdown = (menuItem: string) => {
     const isOpening = activeDropdown !== menuItem
     setActiveDropdown(activeDropdown === menuItem ? null : menuItem)
@@ -1149,10 +1152,9 @@ export default function HomePage() {
   }
 
   const handleProductClick = (product: any) => {
+    trackProductView(product.id, product.title)
+    trackConversionClick('product-view', { productId: product.id, productTitle: product.title })
     setSelectedProduct(product)
-    setShowProductDetail(true)
-    trackProductView(product.title, product.id)
-    closeDropdown() // Close the main dropdown when a product is clicked
   }
 
   const closeProductDetail = () => {
@@ -1191,9 +1193,9 @@ export default function HomePage() {
   }
 
   const handleCtaClick = () => {
+    trackButtonClick('cta-button', 'hero')
+    trackConversionClick('cta-button')
     setShowCtaModal(true)
-    trackButtonClick('cta_button', 'hero_section')
-    closeDropdown() // Close any open dropdowns
   }
 
   const closeCtaModal = () => {
@@ -1216,6 +1218,27 @@ export default function HomePage() {
     }
     return imageMap[productId] || 'placeholder.jpg'
   }
+
+  useEffect(() => {
+    // Track page view
+    trackPageView('homepage')
+    
+    // Apply A/B tests
+    applyABTest('cta-button-test')
+    applyABTest('hero-content-test')
+    
+    // Track scroll depth
+    const handleScroll = () => {
+      const scrollPercent = Math.round(
+        (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
+      )
+      
+      // Scroll tracking handled by conversion optimization
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div className="min-h-screen bg-white flex flex-col relative overflow-hidden">

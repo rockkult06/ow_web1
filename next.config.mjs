@@ -1,88 +1,121 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
   },
   images: {
-    unoptimized: true,
+    domains: ['optimizeworld.net'],
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // SEO and Performance Optimizations
-  compress: true,
-  poweredByHeader: false,
-  generateEtags: true,
-
-  // Security Headers
+  // Enterprise SEO Optimizations
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
           {
-            key: 'X-DNS-Prefetch-Control',
-            value: 'on',
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
           },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+          // Security Headers for Enterprise SEO
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=31536000; includeSubDomains',
+            value: 'max-age=31536000; includeSubDomains; preload',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com;",
           },
         ],
       },
     ]
   },
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/index.html',
-        destination: '/',
-        permanent: true,
-      },
-    ]
+  // Performance Optimizations
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  // Advanced Image Optimization
+  images: {
+    ...nextConfig.images,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    formats: ['image/webp', 'image/avif'],
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // Webpack optimizations
+  // Bundle Analysis and Optimization
   webpack: (config, { dev, isServer }) => {
-    // Optimize bundle size
+    // Production optimizations
     if (!dev && !isServer) {
-      config.optimization.splitChunks = {
-        chunks: 'all',
-        cacheGroups: {
-          vendor: {
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors',
-            chunks: 'all',
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            vendor: {
+              test: /[\\/]node_modules[\\/]/,
+              name: 'vendors',
+              chunks: 'all',
+            },
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: 'all',
+              enforce: true,
+            },
           },
         },
       }
     }
-    
+
+    // Tree shaking optimization
+    config.optimization.usedExports = true
+    config.optimization.sideEffects = false
+
     return config
+  },
+  // Advanced Caching
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      {
+        source: '/robots.txt',
+        destination: '/api/robots',
+      },
+    ]
+  },
+  // Enterprise SEO Features
+  env: {
+    CUSTOM_KEY: process.env.CUSTOM_KEY,
+  },
+  // Advanced Compression
+  experimental: {
+    ...nextConfig.experimental,
+    optimizeCss: true,
+    scrollRestoration: true,
+    legacyBrowsers: false,
+    browsersListForSwc: true,
   },
 }
 
-export default nextConfig
+module.exports = nextConfig
