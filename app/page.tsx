@@ -227,30 +227,34 @@ export default function HomePage() {
               <button
                 onClick={() => toggleDropdown("hakkimizda")}
                 data-menu="hakkimizda"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "hakkimizda" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.hakkimizda}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "hakkimizda" ? "rotate-180" : ""}`} />
               </button>
               <button
                 onClick={() => toggleDropdown("cozumlerimiz")}
                 data-menu="cozumlerimiz"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "cozumlerimiz" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.cozumlerimiz}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "cozumlerimiz" ? "rotate-180" : ""}`} />
               </button>
               <button
                 onClick={() => toggleDropdown("sektorler")}
                 data-menu="sektorler"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "sektorler" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.sektorler}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "sektorler" ? "rotate-180" : ""}`} />
               </button>
               <button
                 onClick={() => toggleDropdown("basari-hikayeleri")}
                 data-menu="basari-hikayeleri"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "basari-hikayeleri" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.basariHikayeleri}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "basari-hikayeleri" ? "rotate-180" : ""}`} />
               </button>
               <a
                 href="/blog"
@@ -261,16 +265,18 @@ export default function HomePage() {
               <button
                 onClick={() => toggleDropdown("iletisim")}
                 data-menu="iletisim"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "iletisim" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.iletisim}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "iletisim" ? "rotate-180" : ""}`} />
               </button>
               <button
                 onClick={() => toggleDropdown("ekibimiz")}
                 data-menu="ekibimiz"
-                className="text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900"
+                className={`text-xs sm:text-sm font-medium transition-all duration-300 text-gray-900 hover:text-blue-600 flex items-center gap-1 ${activeDropdown === "ekibimiz" ? "text-blue-600" : ""}`}
               >
                 {currentContent.menu.ekibimiz}
+                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${activeDropdown === "ekibimiz" ? "rotate-180" : ""}`} />
               </button>
             </nav>
 
@@ -361,82 +367,234 @@ export default function HomePage() {
 
         {/* Desktop Dropdown Menus */}
         {activeDropdown && activeDropdown !== "mobile-menu" && (
-          <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-200 z-30">
+          <div className="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md shadow-xl border-t border-gray-200 z-30 animate-in slide-in-from-top-2 duration-300" style={{ top: '120px' }}>
             <div className="container mx-auto px-4 py-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-2xl font-bold text-gray-900">{currentContent.dropdownTitles[activeDropdown as keyof typeof currentContent.dropdownTitles]}</h2>
+                <button
+                  onClick={closeDropdown}
+                  className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="max-w-4xl mx-auto">
                 {activeDropdown === "hakkimizda" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.hakkimizda}</h3>
-                    <p className="text-gray-600">OW hakkında detaylı bilgi alın.</p>
-                    <div className="space-y-2">
-                      <a href="/about" className="block text-blue-600 hover:text-blue-800">Hakkımızda</a>
-                      <a href="/team" className="block text-blue-600 hover:text-blue-800">Ekibimiz</a>
-                      <a href="/mission" className="block text-blue-600 hover:text-blue-800">Misyonumuz</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Hakkımızda</h3>
+                        <p className="text-gray-600">OW hakkında detaylı bilgi alın.</p>
+                        <div className="space-y-2">
+                          <a href="/about" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Hakkımızda</a>
+                          <a href="/team" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Ekibimiz</a>
+                          <a href="/mission" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Misyonumuz</a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 )}
                 
                 {activeDropdown === "cozumlerimiz" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.cozumlerimiz}</h3>
-                    <p className="text-gray-600">{currentContent.dropdownSubtitles.cozumlerimiz}</p>
-                    <div className="space-y-2">
-                      <a href="/solutions/transitopt" className="block text-blue-600 hover:text-blue-800">OW TransitOpt™</a>
-                      <a href="/solutions/fleetopt" className="block text-blue-600 hover:text-blue-800">OW FleetOpt™</a>
-                      <a href="/solutions/ridersense" className="block text-blue-600 hover:text-blue-800">OW RiderSense™</a>
-                      <a href="/solutions/costlogic" className="block text-blue-600 hover:text-blue-800">OW CostLogic™</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">OW TransitOpt™</h3>
+                        <p className="text-gray-600">Toplu taşıma optimizasyonu ve rota planlama</p>
+                        <a href="/solutions/transitopt" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">OW FleetOpt™</h3>
+                        <p className="text-gray-600">Filo yönetimi ve optimizasyonu</p>
+                        <a href="/solutions/fleetopt" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">OW RiderSense™</h3>
+                        <p className="text-gray-600">Yolcu deneyimi ve gerçek zamanlı bilgi</p>
+                        <a href="/solutions/ridersense" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">OW CostLogic™</h3>
+                        <p className="text-gray-600">Maliyet analizi ve optimizasyonu</p>
+                        <a href="/solutions/costlogic" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
                     </div>
                   </div>
                 )}
                 
                 {activeDropdown === "sektorler" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.sektorler}</h3>
-                    <p className="text-gray-600">{currentContent.dropdownSubtitles.sektorler}</p>
-                    <div className="space-y-2">
-                      <a href="/sectors/municipalities" className="block text-blue-600 hover:text-blue-800">Belediyeler</a>
-                      <a href="/sectors/transport" className="block text-blue-600 hover:text-blue-800">Ulaşım Daireleri</a>
-                      <a href="/sectors/smart-cities" className="block text-blue-600 hover:text-blue-800">Akıllı Şehirler</a>
-                      <a href="/sectors/universities" className="block text-blue-600 hover:text-blue-800">Üniversiteler</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Belediyeler</h3>
+                        <p className="text-gray-600">Şehir yönetimi için akıllı çözümler</p>
+                        <a href="/sectors/municipalities" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Ulaşım Daireleri</h3>
+                        <p className="text-gray-600">Ulaşım sistemleri optimizasyonu</p>
+                        <a href="/sectors/transport" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Akıllı Şehirler</h3>
+                        <p className="text-gray-600">Geleceğin şehir teknolojileri</p>
+                        <a href="/sectors/smart-cities" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Üniversiteler</h3>
+                        <p className="text-gray-600">Kampüs ulaşım optimizasyonu</p>
+                        <a href="/sectors/universities" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
                     </div>
                   </div>
                 )}
                 
                 {activeDropdown === "basari-hikayeleri" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.basariHikayeleri}</h3>
-                    <p className="text-gray-600">{currentContent.dropdownSubtitles.basariHikayeleri}</p>
-                    <div className="space-y-2">
-                      <a href="/success-stories/case-1" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 1</a>
-                      <a href="/success-stories/case-2" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 2</a>
-                      <a href="/success-stories/case-3" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 3</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Vaka Çalışması 1</h3>
+                        <p className="text-gray-600">Büyükşehir belediyesi optimizasyonu</p>
+                        <a href="/success-stories/case-1" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Vaka Çalışması 2</h3>
+                        <p className="text-gray-600">Üniversite kampüs optimizasyonu</p>
+                        <a href="/success-stories/case-2" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Vaka Çalışması 3</h3>
+                        <p className="text-gray-600">Akıllı şehir projesi</p>
+                        <a href="/success-stories/case-3" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Detaylar</a>
+                      </div>
                     </div>
                   </div>
                 )}
                 
                 {activeDropdown === "iletisim" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.iletisim}</h3>
-                    <p className="text-gray-600">{currentContent.dropdownSubtitles.iletisim}</p>
-                    <div className="space-y-2">
-                      <a href="/contact" className="block text-blue-600 hover:text-blue-800">İletişim</a>
-                      <a href="/demo" className="block text-blue-600 hover:text-blue-800">Demo Talep Et</a>
-                      <a href="/support" className="block text-blue-600 hover:text-blue-800">Destek</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">İletişim</h3>
+                        <p className="text-gray-600">Bizimle iletişime geçin</p>
+                        <a href="/contact" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">İletişim</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Demo Talep Et</h3>
+                        <p className="text-gray-600">Ürünlerimizi deneyin</p>
+                        <a href="/demo" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Demo Talep Et</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Destek</h3>
+                        <p className="text-gray-600">Teknik destek ve yardım</p>
+                        <a href="/support" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Destek</a>
+                      </div>
                     </div>
                   </div>
                 )}
                 
                 {activeDropdown === "ekibimiz" && (
-                  <div className="space-y-4">
-                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.ekibimiz}</h3>
-                    <p className="text-gray-600">{currentContent.dropdownSubtitles.ekibimiz}</p>
-                    <div className="space-y-2">
-                      <a href="/team" className="block text-blue-600 hover:text-blue-800">Ekibimiz</a>
-                      <a href="/careers" className="block text-blue-600 hover:text-blue-800">Kariyer</a>
-                      <a href="/partners" className="block text-blue-600 hover:text-blue-800">Ortaklarımız</a>
+                  <div className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Ekibimiz</h3>
+                        <p className="text-gray-600">Uzman ekibimizi tanıyın</p>
+                        <a href="/team" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Ekibimiz</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Kariyer</h3>
+                        <p className="text-gray-600">Bizimle çalışın</p>
+                        <a href="/careers" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Kariyer</a>
+                      </div>
+                      <div className="space-y-4">
+                        <h3 className="text-xl font-bold text-gray-900">Ortaklarımız</h3>
+                        <p className="text-gray-600">Stratejik ortaklarımız</p>
+                        <a href="/partners" className="block text-blue-600 hover:text-blue-800 py-2 hover:bg-blue-50 rounded-lg px-2 transition-colors duration-200">Ortaklarımız</a>
+                      </div>
                     </div>
                   </div>
                 )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Mobile Dropdown Menu */}
+        {activeDropdown === "mobile-menu" && (
+          <div className="fixed top-0 left-0 w-full h-full bg-white/95 backdrop-blur-md z-40 animate-in slide-in-from-top-2 duration-300" style={{ top: '120px' }}>
+            <div className="container mx-auto px-4 py-8">
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-2xl font-bold text-gray-900">Menü</h2>
+                <button
+                  onClick={closeDropdown}
+                  className="text-gray-500 hover:text-gray-700 transition-colors duration-200"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.hakkimizda}</h3>
+                  <div className="space-y-2">
+                    <a href="/about" className="block text-blue-600 hover:text-blue-800 py-2">Hakkımızda</a>
+                    <a href="/team" className="block text-blue-600 hover:text-blue-800 py-2">Ekibimiz</a>
+                    <a href="/mission" className="block text-blue-600 hover:text-blue-800 py-2">Misyonumuz</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.cozumlerimiz}</h3>
+                  <div className="space-y-2">
+                    <a href="/solutions/transitopt" className="block text-blue-600 hover:text-blue-800 py-2">OW TransitOpt™</a>
+                    <a href="/solutions/fleetopt" className="block text-blue-600 hover:text-blue-800 py-2">OW FleetOpt™</a>
+                    <a href="/solutions/ridersense" className="block text-blue-600 hover:text-blue-800 py-2">OW RiderSense™</a>
+                    <a href="/solutions/costlogic" className="block text-blue-600 hover:text-blue-800 py-2">OW CostLogic™</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.sektorler}</h3>
+                  <div className="space-y-2">
+                    <a href="/sectors/municipalities" className="block text-blue-600 hover:text-blue-800 py-2">Belediyeler</a>
+                    <a href="/sectors/transport" className="block text-blue-600 hover:text-blue-800 py-2">Ulaşım Daireleri</a>
+                    <a href="/sectors/smart-cities" className="block text-blue-600 hover:text-blue-800 py-2">Akıllı Şehirler</a>
+                    <a href="/sectors/universities" className="block text-blue-600 hover:text-blue-800 py-2">Üniversiteler</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.basariHikayeleri}</h3>
+                  <div className="space-y-2">
+                    <a href="/success-stories/case-1" className="block text-blue-600 hover:text-blue-800 py-2">Vaka Çalışması 1</a>
+                    <a href="/success-stories/case-2" className="block text-blue-600 hover:text-blue-800 py-2">Vaka Çalışması 2</a>
+                    <a href="/success-stories/case-3" className="block text-blue-600 hover:text-blue-800 py-2">Vaka Çalışması 3</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.iletisim}</h3>
+                  <div className="space-y-2">
+                    <a href="/contact" className="block text-blue-600 hover:text-blue-800 py-2">İletişim</a>
+                    <a href="/demo" className="block text-blue-600 hover:text-blue-800 py-2">Demo Talep Et</a>
+                    <a href="/support" className="block text-blue-600 hover:text-blue-800 py-2">Destek</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.ekibimiz}</h3>
+                  <div className="space-y-2">
+                    <a href="/team" className="block text-blue-600 hover:text-blue-800 py-2">Ekibimiz</a>
+                    <a href="/careers" className="block text-blue-600 hover:text-blue-800 py-2">Kariyer</a>
+                    <a href="/partners" className="block text-blue-600 hover:text-blue-800 py-2">Ortaklarımız</a>
+                  </div>
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-xl font-bold text-gray-900">Blog</h3>
+                  <div className="space-y-2">
+                    <a href="/blog" className="block text-blue-600 hover:text-blue-800 py-2">Blog Ana Sayfa</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
