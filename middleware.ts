@@ -19,32 +19,33 @@ export function middleware(request: NextRequest) {
   response.headers.set('X-Robots-Tag', 'index, follow')
   response.headers.set('X-Sitemap-Location', 'https://optimizeworld.net/sitemap.xml')
 
-  // Language Detection and Redirect
-  const acceptLanguage = request.headers.get('accept-language')
-  const pathname = request.nextUrl.pathname
+  // Language Detection and Redirect (temporarily disabled)
+  // const acceptLanguage = request.headers.get('accept-language')
+  // const pathname = request.nextUrl.pathname
 
-  // If no language is specified in URL, redirect to Turkish (default)
-  if (pathname === '/') {
-    const userLanguage = acceptLanguage?.includes('en') ? 'en' : 
-                        acceptLanguage?.includes('de') ? 'de' : 'tr'
+  // // If no language is specified in URL, redirect to Turkish (default)
+  // if (pathname === '/') {
+  //   const userLanguage = acceptLanguage?.includes('en') ? 'en' : 
+  //                       acceptLanguage?.includes('de') ? 'de' : 'tr'
     
-    if (userLanguage !== 'tr') {
-      return NextResponse.redirect(new URL(`/${userLanguage}`, request.url))
-    }
-  }
+  //   if (userLanguage !== 'tr') {
+  //     return NextResponse.redirect(new URL(`/${userLanguage}`, request.url))
+  //   }
+  // }
 
   return response
 }
 
-export const config = {
-  matcher: [
-    /*
-     * Match all request paths except for the ones starting with:
-     * - api (API routes)
-     * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
-     */
-    '/((?!api|_next/static|_next/image|favicon.ico).*)',
-  ],
-} 
+// Temporarily disabled middleware
+// export const config = {
+//   matcher: [
+//     /*
+//      * Match all request paths except for the ones starting with:
+//      * - api (API routes)
+//      * - _next/static (static files)
+//      * - _next/image (image optimization files)
+//      * - favicon.ico (favicon file)
+//      */
+//     '/((?!api|_next/static|_next/image|favicon.ico).*)',
+//   ],
+// } 

@@ -21,11 +21,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://optimizeworld.net'),
   alternates: {
     canonical: '/',
-    languages: {
-      'tr-TR': '/tr',
-      'en-US': '/en',
-      'de-DE': '/de',
-    },
+    // languages: {
+    //   'tr-TR': '/tr',
+    //   'en-US': '/en',
+    //   'de-DE': '/de',
+    // },
   },
   openGraph: {
     type: 'website',
@@ -168,11 +168,11 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
         
-        {/* Hreflang Tags */}
-        <link rel="alternate" hrefLang="tr" href="https://optimizeworld.net/" />
+        {/* Hreflang Tags (commented out until language pages are created) */}
+        {/* <link rel="alternate" hrefLang="tr" href="https://optimizeworld.net/" />
         <link rel="alternate" hrefLang="en" href="https://optimizeworld.net/en/" />
         <link rel="alternate" hrefLang="de" href="https://optimizeworld.net/de/" />
-        <link rel="alternate" hrefLang="x-default" href="https://optimizeworld.net/" />
+        <link rel="alternate" hrefLang="x-default" href="https://optimizeworld.net/" /> */}
         
         {/* Additional Meta Tags */}
         <meta name="author" content="OW - Optimize the World" />
