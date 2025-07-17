@@ -163,6 +163,20 @@ export default function HomePage() {
     setActiveDropdown(null)
   }
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (activeDropdown && !(event.target as Element).closest('nav')) {
+        setActiveDropdown(null)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [activeDropdown])
+
   const handleCtaClick = () => {
     trackButtonClick('cta_button', 'hero_section')
   }
@@ -344,6 +358,89 @@ export default function HomePage() {
             </div>
           </div>
         </main>
+
+        {/* Desktop Dropdown Menus */}
+        {activeDropdown && activeDropdown !== "mobile-menu" && (
+          <div className="absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg border-t border-gray-200 z-30">
+            <div className="container mx-auto px-4 py-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {activeDropdown === "hakkimizda" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.hakkimizda}</h3>
+                    <p className="text-gray-600">OW hakkında detaylı bilgi alın.</p>
+                    <div className="space-y-2">
+                      <a href="/about" className="block text-blue-600 hover:text-blue-800">Hakkımızda</a>
+                      <a href="/team" className="block text-blue-600 hover:text-blue-800">Ekibimiz</a>
+                      <a href="/mission" className="block text-blue-600 hover:text-blue-800">Misyonumuz</a>
+                    </div>
+                  </div>
+                )}
+                
+                {activeDropdown === "cozumlerimiz" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.cozumlerimiz}</h3>
+                    <p className="text-gray-600">{currentContent.dropdownSubtitles.cozumlerimiz}</p>
+                    <div className="space-y-2">
+                      <a href="/solutions/transitopt" className="block text-blue-600 hover:text-blue-800">OW TransitOpt™</a>
+                      <a href="/solutions/fleetopt" className="block text-blue-600 hover:text-blue-800">OW FleetOpt™</a>
+                      <a href="/solutions/ridersense" className="block text-blue-600 hover:text-blue-800">OW RiderSense™</a>
+                      <a href="/solutions/costlogic" className="block text-blue-600 hover:text-blue-800">OW CostLogic™</a>
+                    </div>
+                  </div>
+                )}
+                
+                {activeDropdown === "sektorler" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.sektorler}</h3>
+                    <p className="text-gray-600">{currentContent.dropdownSubtitles.sektorler}</p>
+                    <div className="space-y-2">
+                      <a href="/sectors/municipalities" className="block text-blue-600 hover:text-blue-800">Belediyeler</a>
+                      <a href="/sectors/transport" className="block text-blue-600 hover:text-blue-800">Ulaşım Daireleri</a>
+                      <a href="/sectors/smart-cities" className="block text-blue-600 hover:text-blue-800">Akıllı Şehirler</a>
+                      <a href="/sectors/universities" className="block text-blue-600 hover:text-blue-800">Üniversiteler</a>
+                    </div>
+                  </div>
+                )}
+                
+                {activeDropdown === "basari-hikayeleri" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.basariHikayeleri}</h3>
+                    <p className="text-gray-600">{currentContent.dropdownSubtitles.basariHikayeleri}</p>
+                    <div className="space-y-2">
+                      <a href="/success-stories/case-1" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 1</a>
+                      <a href="/success-stories/case-2" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 2</a>
+                      <a href="/success-stories/case-3" className="block text-blue-600 hover:text-blue-800">Vaka Çalışması 3</a>
+                    </div>
+                  </div>
+                )}
+                
+                {activeDropdown === "iletisim" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.iletisim}</h3>
+                    <p className="text-gray-600">{currentContent.dropdownSubtitles.iletisim}</p>
+                    <div className="space-y-2">
+                      <a href="/contact" className="block text-blue-600 hover:text-blue-800">İletişim</a>
+                      <a href="/demo" className="block text-blue-600 hover:text-blue-800">Demo Talep Et</a>
+                      <a href="/support" className="block text-blue-600 hover:text-blue-800">Destek</a>
+                    </div>
+                  </div>
+                )}
+                
+                {activeDropdown === "ekibimiz" && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-gray-900">{currentContent.dropdownTitles.ekibimiz}</h3>
+                    <p className="text-gray-600">{currentContent.dropdownSubtitles.ekibimiz}</p>
+                    <div className="space-y-2">
+                      <a href="/team" className="block text-blue-600 hover:text-blue-800">Ekibimiz</a>
+                      <a href="/careers" className="block text-blue-600 hover:text-blue-800">Kariyer</a>
+                      <a href="/partners" className="block text-blue-600 hover:text-blue-800">Ortaklarımız</a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Video Background */}
         <video
