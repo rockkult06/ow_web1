@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { generateBlogPostingSchema } from '@/lib/structured-data'
-import { trackEvent } from '@/lib/analytics'
-import { useEffect } from 'react'
+import { BlogAnalytics } from '@/components/blog-analytics'
+import { BlogLink } from '@/components/blog-links'
 
 // Blog post verileri
 const blogPosts = {
@@ -153,16 +153,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     notFound()
   }
 
-  // Track blog post view
-  useEffect(() => {
-    trackEvent('blog_post_view', {
-      post_id: params.slug,
-      post_title: post.title,
-      post_category: post.category,
-      post_author: post.author
-    })
-  }, [params.slug, post.title, post.category, post.author])
-
   return (
     <>
       {/* Structured Data (JSON-LD) */}
@@ -182,19 +172,24 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         }}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4 py-16">
+            <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        <BlogAnalytics 
+          postId={params.slug}
+          postTitle={post.title}
+          postCategory={post.category}
+          postAuthor={post.author}
+        />
+        <div className="container mx-auto px-4 py-16">
         {/* Breadcrumb */}
         <nav className="mb-8">
-          <Link 
+          <BlogLink 
             href="/blog" 
-            onClick={() => trackEvent('blog_back_to_list', {
-              current_post: params.slug
-            })}
+            eventName="blog_back_to_list"
+            eventData={{ current_post: params.slug }}
             className="text-blue-600 hover:text-blue-800"
           >
             ← Blog'a Dön
-          </Link>
+          </BlogLink>
         </nav>
 
         {/* Article Header */}
@@ -253,17 +248,18 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                         {relatedPost.category}
                       </Badge>
                                              <h4 className="font-semibold mb-2">
-                         <Link 
+                         <BlogLink 
                            href={`/blog/${slug}`} 
-                           onClick={() => trackEvent('blog_related_post_click', {
+                           eventName="blog_related_post_click"
+                           eventData={{
                              current_post: params.slug,
                              related_post: slug,
                              related_post_title: relatedPost.title
-                           })}
+                           }}
                            className="hover:text-blue-600"
                          >
                            {relatedPost.title}
-                         </Link>
+                         </BlogLink>
                        </h4>
                       <p className="text-sm text-gray-600 mb-2">
                         {relatedPost.excerpt}
