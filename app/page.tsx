@@ -41,7 +41,8 @@ import {
   Mail,
   Phone,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { trackEvent, trackButtonClick, trackMenuInteraction, trackProductView, trackContactInteraction, trackLanguageChange, trackDemoRequest } from "@/lib/analytics"
 
 // --- Content Data (Turkish & English) ---
 const content = {
@@ -373,8 +374,8 @@ const content = {
         "OW, akıllı şehirler ve kentsel altyapılar için veri bilimi, optimizasyon algoritmaları ve yapay zeka tabanlı çözümler geliştiren çok disiplinli bir teknoloji kuruluşudur. Temel hedefimiz; belediyeler, ulaşım daireleri ve kamu kurumlarının karar alma süreçlerini bilimsel yöntemlerle güçlendirmek, kaynak kullanımını optimize etmek ve hizmet kalitesini ölçülebilir biçimde artırmaktır.",
       expertiseAreas: {
         title: "Uzmanlık Alanlarımız",
-        smartMobility: {
-          title: "🚌 Akıllı Hareketlilik Çözümleri",
+                  smartMobility: {
+            title: "Akıllı Hareketlilik Çözümleri",
           description:
             "OW; belediyeler, ulaşım daireleri ve ulaşım bakanlıkları gibi kurumlara yönelik olarak, aşağıdaki konularda veri destekli teknolojiler sunar:",
           points: [
@@ -739,7 +740,7 @@ const content = {
       expertiseAreas: {
         title: "Our Areas of Expertise",
           smartMobility: {
-            title: "🚌 Smart Mobility Solutions",
+            title: "Smart Mobility Solutions",
           description:
               "OW provides data-driven technologies to institutions such as municipalities, transport departments, and transport ministries in the following areas:",
           points: [
@@ -1054,7 +1055,7 @@ const content = {
               expertiseAreas: {
           title: "Unsere Fachgebiete",
           smartMobility: {
-            title: "🚌 Smart Mobility Lösungen",
+            title: "Smart Mobility Lösungen",
             description:
               "OW bietet datengestützte Technologien für Verkehrsbetriebe, Gemeinden und Verkehrsministerien in folgenden Bereichen:",
             points: [
@@ -1117,7 +1118,16 @@ export default function HomePage() {
   const [showLangDropdown, setShowLangDropdown] = useState(false)
 
   const toggleDropdown = (menuItem: string) => {
+    const isOpening = activeDropdown !== menuItem
     setActiveDropdown(activeDropdown === menuItem ? null : menuItem)
+    
+    // Track menu interaction
+    if (isOpening) {
+      trackMenuInteraction(menuItem, 'open')
+    } else {
+      trackMenuInteraction(menuItem, 'close')
+    }
+    
     // Close any detail modals or expanded items when main dropdown changes
     setShowProductDetail(false)
     setSelectedProduct(null)
@@ -1141,6 +1151,7 @@ export default function HomePage() {
   const handleProductClick = (product: any) => {
     setSelectedProduct(product)
     setShowProductDetail(true)
+    trackProductView(product.title, product.id)
     closeDropdown() // Close the main dropdown when a product is clicked
   }
 
@@ -1162,9 +1173,11 @@ export default function HomePage() {
   const toggleContactItem = (id: string) => {
     if (id === "demo-form") {
       setShowDemoForm(true)
+      trackContactInteraction('demo_form')
       closeDropdown() // Close the main dropdown when the demo form is opened
     } else {
       setOpenContactId(openContactId === id ? null : id)
+      trackContactInteraction(id)
     }
   }
 
@@ -1179,6 +1192,7 @@ export default function HomePage() {
 
   const handleCtaClick = () => {
     setShowCtaModal(true)
+    trackButtonClick('cta_button', 'hero_section')
     closeDropdown() // Close any open dropdowns
   }
 
@@ -1259,6 +1273,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("hakkimizda")}
               onMouseEnter={() => setHoveredMenuItem("hakkimizda")}
+              data-menu="hakkimizda"
               className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "hakkimizda"
                   ? "text-gray-900 sm:scale-110"
@@ -1270,6 +1285,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("cozumlerimiz")}
               onMouseEnter={() => setHoveredMenuItem("cozumlerimiz")}
+              data-menu="cozumlerimiz"
               className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "cozumlerimiz"
                   ? "text-gray-900 sm:scale-110"
@@ -1281,6 +1297,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("sektorler")}
               onMouseEnter={() => setHoveredMenuItem("sektorler")}
+              data-menu="sektorler"
               className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "sektorler"
                   ? "text-gray-900 sm:scale-110"
@@ -1292,6 +1309,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("basari-hikayeleri")}
               onMouseEnter={() => setHoveredMenuItem("basari-hikayeleri")}
+              data-menu="basari-hikayeleri"
               className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "basari-hikayeleri"
                   ? "text-gray-900 sm:scale-110"
@@ -1303,6 +1321,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("iletisim")}
               onMouseEnter={() => setHoveredMenuItem("iletisim")}
+              data-menu="iletisim"
               className={`text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "iletisim"
                   ? "text-gray-900 sm:scale-110"
@@ -1314,6 +1333,7 @@ export default function HomePage() {
             <button
               onClick={() => toggleDropdown("ekibimiz")} // Changed from search
               onMouseEnter={() => setHoveredMenuItem("ekibimiz")} // Changed from search
+              data-menu="ekibimiz"
               className={`flex items-center gap-1 sm:gap-2 text-xs sm:text-sm font-medium transition-all duration-300 ${
                 hoveredMenuItem === null || hoveredMenuItem === "ekibimiz" // Changed from search
                   ? "text-gray-900 sm:scale-110"
@@ -1354,7 +1374,11 @@ export default function HomePage() {
                 {["TR", "EN", "DE"].filter(l => l !== selectedLanguage).map(l => (
                   <button
                     key={l}
-                    onClick={() => { setSelectedLanguage(l); setShowLangDropdown(false); }}
+                    onClick={() => { 
+                      trackLanguageChange(selectedLanguage, l);
+                      setSelectedLanguage(l); 
+                      setShowLangDropdown(false); 
+                    }}
                     className="w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-white/30 rounded-lg transition-colors duration-200"
                   >
                     {l === "TR" ? "Türkçe" : l === "EN" ? "English" : "Deutsch"}
@@ -1460,6 +1484,7 @@ export default function HomePage() {
                               <button
                                 key={product.id}
                                 onClick={() => handleProductClick(product)}
+                                data-product={product.id}
                                 className="flex items-start gap-3 text-left w-full hover:bg-white/30 p-2 rounded-lg transition-colors duration-200"
                               >
                                 <div>
@@ -1512,6 +1537,7 @@ export default function HomePage() {
                               <button
                                 key={product.id}
                                 onClick={() => handleProductClick(product)}
+                                data-product={product.id}
                                 className="flex items-start gap-3 text-left w-full hover:bg-white/30 p-2 rounded-lg transition-colors duration-200"
                               >
                                 <div>
@@ -1966,7 +1992,7 @@ export default function HomePage() {
                 <X className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
-            <form className="space-y-3 sm:space-y-4 text-sm sm:text-base">
+            <form id="demo-form" className="space-y-3 sm:space-y-4 text-sm sm:text-base">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700">
                   {selectedLanguage === "TR" ? "Adınız Soyadınız" : "Your Name"}
@@ -2038,6 +2064,7 @@ export default function HomePage() {
               </div>
               <button
                 type="submit"
+                onClick={() => trackDemoRequest()}
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-200"
               >
                 {selectedLanguage === "TR" ? "Gönder" : "Submit"}
