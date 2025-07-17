@@ -21,24 +21,11 @@
       "static/chunks/common-64805133bc3a02be.js",
       "static/chunks/app/global-error-67eba1e7d2207e97.js"
     ],
-    "/not-found": [
-      "static/chunks/webpack-013194c79a4f4649.js",
-      "static/chunks/vendors-ff109cc3f7dc2b4f.js",
-      "static/chunks/main-app-1945b656418ec9d7.js",
-      "static/chunks/app/not-found-881f8e85fadc5115.js"
-    ],
-    "/_not-found/page": [
-      "static/chunks/webpack-013194c79a4f4649.js",
-      "static/chunks/vendors-ff109cc3f7dc2b4f.js",
-      "static/chunks/main-app-1945b656418ec9d7.js",
-      "static/chunks/common-64805133bc3a02be.js",
-      "static/chunks/app/_not-found/page-43d26d39472e61f4.js"
-    ],
     "/layout": [
       "static/chunks/webpack-013194c79a4f4649.js",
       "static/chunks/vendors-ff109cc3f7dc2b4f.js",
       "static/chunks/main-app-1945b656418ec9d7.js",
-      "static/css/f6741c3e328e4500.css",
+      "static/css/13cf4d3ef096213e.css",
       "static/chunks/app/layout-c1403964803a296a.js"
     ],
     "/error": [
@@ -55,12 +42,25 @@
       "static/chunks/common-64805133bc3a02be.js",
       "static/chunks/app/loading-eb1d453bd81b8caf.js"
     ],
+    "/not-found": [
+      "static/chunks/webpack-013194c79a4f4649.js",
+      "static/chunks/vendors-ff109cc3f7dc2b4f.js",
+      "static/chunks/main-app-1945b656418ec9d7.js",
+      "static/chunks/app/not-found-881f8e85fadc5115.js"
+    ],
     "/page": [
       "static/chunks/webpack-013194c79a4f4649.js",
       "static/chunks/vendors-ff109cc3f7dc2b4f.js",
       "static/chunks/main-app-1945b656418ec9d7.js",
       "static/chunks/common-64805133bc3a02be.js",
       "static/chunks/app/page-505694b269f642f7.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack-013194c79a4f4649.js",
+      "static/chunks/vendors-ff109cc3f7dc2b4f.js",
+      "static/chunks/main-app-1945b656418ec9d7.js",
+      "static/chunks/common-64805133bc3a02be.js",
+      "static/chunks/app/_not-found/page-43d26d39472e61f4.js"
     ],
     "/seo-dashboard/page": [
       "static/chunks/webpack-013194c79a4f4649.js",
