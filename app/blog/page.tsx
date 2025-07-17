@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { generateBlogSchema } from '@/lib/structured-data'
-import { trackEvent } from '@/lib/analytics'
+import { BlogLink } from '@/components/blog-links'
 
 export const metadata: Metadata = {
   title: 'Blog - OptimizeWorld | Lojistik ve Optimizasyon Çözümleri',
@@ -90,16 +90,17 @@ export default function BlogPage() {
                   <span className="text-xs text-gray-500">{post.readTime}</span>
                 </div>
                 <CardTitle className="text-xl group-hover:text-blue-600 transition-colors">
-                  <Link 
+                  <BlogLink 
                     href={`/blog/${post.id}`}
-                    onClick={() => trackEvent('blog_post_click', {
+                    eventName="blog_post_click"
+                    eventData={{
                       post_id: post.id,
                       post_title: post.title,
                       post_category: post.category
-                    })}
+                    }}
                   >
                     {post.title}
-                  </Link>
+                  </BlogLink>
                 </CardTitle>
                 <CardDescription className="text-sm text-gray-600">
                   {new Date(post.date).toLocaleDateString('tr-TR', {
@@ -113,20 +114,21 @@ export default function BlogPage() {
                 <p className="text-gray-700 mb-4">
                   {post.excerpt}
                 </p>
-                <Link 
+                <BlogLink 
                   href={`/blog/${post.id}`}
-                  onClick={() => trackEvent('blog_read_more_click', {
+                  eventName="blog_read_more_click"
+                  eventData={{
                     post_id: post.id,
                     post_title: post.title,
                     post_category: post.category
-                  })}
+                  }}
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm inline-flex items-center"
                 >
                   Devamını Oku
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </BlogLink>
               </CardContent>
             </Card>
           ))}
