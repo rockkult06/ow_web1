@@ -19,9 +19,7 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
-  },
+
   // Security Headers
   async headers() {
     return [
