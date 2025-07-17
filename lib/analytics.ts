@@ -124,4 +124,40 @@ export const trackError = (errorType: string, errorMessage: string) => {
     error_message: errorMessage,
     page_location: window.location.pathname,
   })
+}
+
+// Core Web Vitals tracking
+export const trackCoreWebVitals = () => {
+  if (typeof window === 'undefined') return
+
+  // LCP
+  new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries()
+    const lcp = entries[entries.length - 1]
+    if (lcp) {
+      trackPerformance('LCP', lcp.startTime)
+    }
+  }).observe({ entryTypes: ['largest-contentful-paint'] })
+
+  // FID
+  new PerformanceObserver((entryList) => {
+    const entries = entryList.getEntries()
+    for (const entry of entries) {
+      if (entry.entryType === 'first-input') {
+        const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime
+        trackPerformance('FID', fid)
+      }
+    }
+  }).observe({ entryTypes: ['first-input'] })
+
+  // CLS
+  let cls = 0
+  new PerformanceObserver((entryList) => {
+    for (const entry of entryList.getEntries()) {
+      if (entry.entryType === 'layout-shift') {
+        cls += (entry as any).value
+        trackPerformance('CLS', cls)
+      }
+    }
+  }).observe({ entryTypes: ['layout-shift'] })
 } 
