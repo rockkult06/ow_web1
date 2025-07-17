@@ -2,19 +2,16 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
-import { PerformanceMonitor } from '@/components/performance-monitor'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'OW - Optimize the World | Akıllı Şehir Çözümleri',
   description: 'OW, akıllı şehirler için veri odaklı çözümler sunan teknoloji şirketi. Toplu taşıma optimizasyonu, akıllı hareketlilik ve ulaşım teknolojileri.',
-  keywords: 'akıllı şehir, toplu taşıma optimizasyonu, veri analizi, ulaşım teknolojileri, OW, Optimize the World, smart city, mobility, transport optimization, data analytics',
+  keywords: 'akıllı şehir, toplu taşıma optimizasyonu, veri analizi, ulaşım teknolojileri, OW, Optimize the World',
   authors: [{ name: 'OW - Optimize the World' }],
   creator: 'OW - Optimize the World',
   publisher: 'OW - Optimize the World',
-  category: 'Technology',
-  classification: 'Business',
   formatDetection: {
     email: false,
     address: false,
@@ -41,15 +38,9 @@ export const metadata: Metadata = {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'OW - Optimize the World - Akıllı Şehir Çözümleri',
-        type: 'image/png',
+        alt: 'OW - Optimize the World',
       },
     ],
-    countryName: 'Turkey',
-    emails: ['info@optimizeworld.net'],
-    phoneNumbers: ['+90 xxx xxx xx xx'],
-    faxNumbers: ['+90 xxx xxx xx xx'],
-    ttl: 86400,
   },
   twitter: {
     card: 'summary_large_image',
@@ -57,36 +48,22 @@ export const metadata: Metadata = {
     description: 'OW, akıllı şehirler için veri odaklı çözümler sunan teknoloji şirketi.',
     images: ['/images/twitter-image.png'],
     creator: '@optimizeworld',
-    site: '@optimizeworld',
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
-      'noimageindex': false,
-      'notranslate': false,
     },
   },
   verification: {
     google: 'G-30XM7GYBBH', // Google Analytics 4 Measurement ID
     // google: 'your-google-search-console-verification-code', // Google Search Console verification code
     yandex: 'your-yandex-verification-code',
-  },
-  other: {
-    'mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-capable': 'yes',
-    'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'OW',
-    'application-name': 'OW - Optimize the World',
-    'msapplication-TileColor': '#0171E3',
-    'theme-color': '#0171E3',
-    'msapplication-config': '/browserconfig.xml',
   },
 }
 
@@ -165,7 +142,6 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <PerformanceMonitor />
           {children}
         </ThemeProvider>
       </body>

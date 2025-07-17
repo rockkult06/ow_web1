@@ -1,33 +1,10 @@
 User-agent: *
 Allow: /
 
-# Blog sayfaları
-Allow: /blog/
-Allow: /blog/*
-
-# Sitemaps
+# Sitemap
 Sitemap: https://optimizeworld.net/sitemap.xml
-Sitemap: https://optimizeworld.net/blog-sitemap.xml
-Sitemap: https://optimizeworld.net/sitemap-index.xml
 
 # Crawl-delay
-Crawl-delay: 1
-
-# Google AdsBot ignores robots.txt unless specifically named
-User-agent: AdsBot-Google
-Allow: /
-
-# Google AdSense
-User-agent: Mediapartners-Google
-Allow: /
-
-# Googlebot-Image
-User-agent: Googlebot-Image
-Allow: /
-
-# Bingbot
-User-agent: Bingbot
-Allow: /
 Crawl-delay: 1
 
 # Disallow specific paths
