@@ -17,7 +17,6 @@ const nextConfig = {
   generateEtags: true,
   reactStrictMode: true,
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
   headers: async () => {
