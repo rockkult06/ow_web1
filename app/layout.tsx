@@ -3,6 +3,12 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { generateOrganizationSchema, generateWebsiteSchema } from '@/lib/structured-data'
+import { 
+  generateLocalBusinessSchema, 
+  generateSoftwareApplicationSchema,
+  generateWebsiteSchemaWithSearch,
+  generateHowToSchema
+} from '@/lib/advanced-schema'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -114,6 +120,10 @@ export default function RootLayout({
 
   const organizationSchema = generateOrganizationSchema(organizationData)
   const websiteSchema = generateWebsiteSchema(websiteData)
+  const localBusinessSchema = generateLocalBusinessSchema()
+  const softwareApplicationSchema = generateSoftwareApplicationSchema()
+  const websiteWithSearchSchema = generateWebsiteSchemaWithSearch()
+  const howToSchema = generateHowToSchema()
 
   return (
     <html lang="tr" suppressHydrationWarning>
@@ -197,6 +207,30 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareApplicationSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteWithSearchSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(howToSchema)
           }}
         />
         
